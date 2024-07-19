@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* root pseudo class for defining custom global properties */
+:root{
+    --main-color: #deab5f;
+    --primary-color: #312e2e;
+}
+/* utility styles */
+button{
+    padding: 10px 30px;
+    background-color: var(--main-color);
+    border: none;
+    cursor: pointer;
+
+    border-radius: 1rem ;
+}
+
+/* resets */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #100e0f;
+}
+/* navstart */
+nav{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 15px ;
+}
+/* list items */
+li{
+    display: inline;
+    list-style: none;
+}
+li a{
+    color: white;
+    text-decoration: none;
+    margin-left: 50px;
+}
+/* when we hover over the anchors */
+li a:hover{
+    border-bottom: 2px solid var(--main-color);
+    padding-bottom: 10px;
+}
+
+
+
+/* header start */
+.header{
+    background: url(coffe.png);
+    /* background-color: white; */
+    height: 100vh;
+    background-size: 250px 250px;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Playfair Display,serif;
+    color: white;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* everychild child with absolute position will be relative to it */
+    position: relative;
+    bottom: 2rem;
+
+}
+
+.main-heading{
+    position: absolute;
+    top: 7.5rem;
+    font-size: 4rem;
+    word-spacing: 10px;
+}
+
+.primary-heading{
+    position: absolute;
+
+    font-size: 4rem;
+    word-spacing: 10px;
+    /* padding-top: 22rem; */
+    top: 30rem;
+    
+}
+.header .main-btn{
+    position: relative;
+    top: 15rem;
+    
+}
+/* first section */
+
+#our-story{
+    height: 100vh;
+    
+    display: flex;
+    /* text-align: center; */
+    justify-content: space-around;
+    align-items: center;
+
+    /* row wise */
+    /* flex-wrap: wrap; */
+
+}
+
+.img{
+    background: url("coffe2.png");
+    height:  400px;
+    width: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* transform: translateX(-50px); */
+}
+.title-style{
+    display: flex;
+}
+.line{
+    width: 100px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 530px;
+    transform: translateY(-33px);
+    
+
+}
+.section-content{
+    color: white;
+    max-width: 500px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 20px;
+    
+
+    /* transform: translateX(100px); */
+}
+.title{
+    font-family: Playfair Display,serif;
+    font-size: 4rem ;
+    word-spacing: 10px;
+    transform: translateY(-50px);
+}
+.section-content p{
+    margin-bottom: 20px;
+}
+
+
+/* second section */
+.coffee-container{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.content-section{
+    color: white;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.content-section p{
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.title-two{
+    font-family: Playfair Display,serif;
+    font-size: 4rem ;
+    word-spacing: 10px;
+    line-height: 70px;
+    padding-bottom: 20px;
+}
+.img-2{
+    background:url("coffe3.png");
+    height:  400px;
+    width: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* products */
+
+.title-three{
+    font-family: Playfair Display,serif;
+    font-size: 4rem ;
+    word-spacing: 10px;
+    color: white;
+
+    text-align: center;
+    margin-top: 10rem;
+
+}
+.cards{
+    margin-top: 5rem;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    flex-wrap: wrap;
+    text-align: center;
+
+    
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+
+    height: 400px;
+    width: 300px;
+
+    position: relative;
+}
+
+.card-img{
+    /* background-color: url(); */
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    /* border: 2px solid white; */
+
+    transform: translateY(-12.5rem);
+}
+.card-title{
+    font-family: Playfair Display,serif;
+    font-size: 20px;
+    color: white;
+    margin-top: 40px;
+}
+.cards .items{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: white;
+    line-height: 40px;
+}
+
+.cards .img-one{
+    background: url("coffe.png");
+    background-position: center;
+    background-size: cover;
+    
+}
+.cards .img-two{
+    background: url("coffe2.png");
+    background-position: center;
+    background-size: cover;
+}
+.cards .img-three{
+    background: url("coffe3.png");
+    background-position: center;
+    background-size: cover;
+}
+
+/* footer */
+footer{
+
+    color: white;
+    height: 50vh;
+    margin-top: 50px;
+}
+footer .container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-content: space-around;
+    /* margin: 30px; */
+
+}
+
+.container .heading-info span{
+    color: var(--main-color);
+}
+
+footer>p{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size: medium;
+    margin-top: 10px;
+}
+
+@media (max-width:720px) {
+    .main-heading,.primary-heading{
+        font-size: 3rem;
+    }
+    #our-story{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .coffee-container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section-content .line{
+        display: none;
+    }
+    .section-content .title,.coffee-container .title-two,.products .title-three{
+        font-size: 3rem;
+        /* text-align: center; */
+    }
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+}
