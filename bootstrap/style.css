@@ -1,0 +1,25 @@
+.showcase::before{
+    content: '';
+    display: block;
+    padding: 50px;
+}
+
+@media(min-width: 768px){
+    /* medium and above */
+    .input-group{
+        max-width: 50%;
+    }
+
+    #cards .container .borderr{
+        padding: 2rem;
+        box-sizing: border-box;
+        border: 5px solid rgb(31, 143, 208);
+    }
+}
+
+
+#cards .container .row .card-body:hover{
+    transition: 0.5s;
+    border: none;
+    box-shadow: 2px 2px 5px black;
+}
