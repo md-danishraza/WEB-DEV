@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about {
+  padding-top: 1rem;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 20rem;
+  color: white;
+}
+.about p {
+  width: 600px;
+  padding: 1rem 5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+.about p span {
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: linear-gradient(to left, #35d08f, #e32e64);
+  font-weight: bolder;
+  font-family: "Playfair Display", serif;
+}
+.about .two {
+  align-self: flex-end;
+}
+.about p:hover {
+  transition: all 1s;
+  color: #e22f64;
+}
+
+.container {
+  height: 50vh;
+  background: linear-gradient(to right, #4f2d62, #ac39ea);
+  padding: 20px;
+}
+.container nav {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Roboto", sans-serif;
+}
+.container nav ul {
+  margin-top: 20px;
+  margin-right: 40px;
+}
+.container nav ul li {
+  display: inline;
+  list-style: none;
+  margin-left: 30px;
+}
+.container nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+.container nav ul li a:hover {
+  transition: all 0.5s;
+  color: orange;
+}
+
+.frame-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.frame-container .gradient {
+  position: absolute;
+  height: 62%;
+  width: 72%;
+  background: linear-gradient(to left, #35d08f, #e32e64);
+  border-radius: 10px;
+}
+.frame-container header {
+  width: 73%;
+  height: 74%;
+  border-radius: 5px;
+  position: relative;
+  background-image: url("Images\\simon.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.frame-container header .social {
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.frame-container header .social .line {
+  width: 3px;
+  border-radius: 2px;
+  height: 20%;
+  background-color: rgba(255, 255, 255, 0.311);
+}
+.frame-container header .social i {
+  margin: 0.5rem;
+  font-size: larger;
+}
+.frame-container header .social i:hover {
+  transition: all 0.5s;
+  color: orange;
+}
+.frame-container header h1 {
+  font-size: 100px;
+  font-family: "Playfair Display", serif;
+  font-weight: lighter;
+  margin-top: 20rem;
+  line-height: 5.4rem;
+  text-align: right;
+}
+
+.project .title {
+  margin-top: 2rem;
+  margin-left: 5rem;
+  font-family: "Playfair Display", serif;
+  font-size: 80px;
+  color: white;
+  font-weight: lighter;
+}
+.project .title span {
+  background-color: rgba(174, 129, 191, 0.3921568627);
+}
+.project .images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project img {
+  width: 200px;
+  height: 100vh;
+  margin: 30px 10px;
+}
+.project .img-one {
+  transform: translateY(200px);
+}
+.project .img-two {
+  transform: translateY(150px);
+}
+.project .img-three {
+  transform: translateY(100px);
+}
+.project .img-four {
+  transform: translateY(50px);
+}
+
+.clients {
+  height: 100vh;
+  margin-top: 15rem;
+}
+.clients h1 {
+  text-align: right;
+  margin-top: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 2rem;
+  font-family: "Playfair Display", serif;
+  font-size: 80px;
+  color: white;
+  font-weight: lighter;
+}
+.clients h1 span {
+  background: rgba(174, 129, 191, 0.3921568627);
+}
+.clients .card-container .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.clients .card-container .cards .card {
+  background: #2b252e;
+  padding: 20px;
+  color: white;
+  line-height: 1.5;
+  margin: 10px;
+}
+.clients .card-container .cards .card p {
+  width: 200px;
+  font-family: "Roboto", sans-serif;
+  color: gray;
+}
+.clients .card-container .cards .card .user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clients .card-container .cards .card .user-info .user-img {
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background: url("D:\\webdev\\sass\\Starter\\10. Portfolio Site\\Images\\clients\\1.jpg") no-repeat center/cover;
+}
+.clients .card-container .cards .card .user-info .img-two {
+  background: url("D:\\webdev\\sass\\Starter\\10. Portfolio Site\\Images\\clients\\2.jpg") no-repeat center/cover;
+}
+.clients .card-container .cards .card .user-info .img-three {
+  background: url("D:\\webdev\\sass\\Starter\\10. Portfolio Site\\Images\\clients\\3.jpg") no-repeat center/cover;
+}
+
+footer {
+  height: 50vh;
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #ac39ea;
+  color: white;
+}
+footer h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+footer p {
+  max-width: 400px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+footer .about-company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .about-company .footer-container {
+  text-align: center;
+}
+footer .about-company .footer-container p {
+  font-family: "Roboto", sans-serif;
+  padding-bottom: 10px;
+}
+footer .about-company h1 {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+body {
+  background: #211f22;
+}/*# sourceMappingURL=style.css.map */

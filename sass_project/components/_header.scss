@@ -1,0 +1,72 @@
+.frame-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 80vh;
+
+    .gradient{
+        position: absolute;
+        height: 62%;
+        width: 72%;
+        background: $gradient;
+        border-radius: 10px;
+        // z-index: -1 ;
+    }
+    header{
+        width: 73%;
+        height: 74%;
+        border-radius: 5px;
+        position: relative;
+        background-image: url("Images\\simon.jpg");
+
+        background-position: center;
+        background-size: cover;
+        
+
+        display: flex;
+        justify-content: space-between;
+        color: white;
+
+
+        .social{
+            padding-left: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .line{
+                width: 3px;
+                border-radius: 2px;
+                height: 20%;
+                background-color: rgba(255, 255, 255, 0.311);
+
+            
+            }
+
+            i{  
+                margin: .5rem;
+                font-size: larger;
+            }
+            i:hover{
+                transition: all .5s;
+                color: orange;
+            }
+            
+        }
+        h1{
+            font-size: 100px;
+            font-family: $main-font;
+            font-weight: lighter;
+
+            margin-top:20rem;
+            line-height: 5.4rem;
+            text-align: right;
+        }
+    }
+    // header:hover h1{
+    //     transition: all 1s;
+    //     background: $gradient;
+    // }
+}

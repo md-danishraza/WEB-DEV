@@ -1,0 +1,31 @@
+.container{
+    height: 50vh;
+    background: linear-gradient(to right,#4f2d62,#ac39ea);
+    padding: 20px;
+    nav{
+        display: flex;
+        justify-content: flex-end;
+
+        font-family: $primary-font;
+
+        ul{
+            margin-top: 20px;
+            margin-right: 40px;
+
+            li{
+                display: inline;
+                list-style: none;
+                margin-left: 30px;
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                a:hover{
+                    transition: all .5s;
+                    color: orange;
+                }
+            }
+        }
+    }
+}

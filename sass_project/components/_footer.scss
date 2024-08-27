@@ -1,0 +1,45 @@
+footer{
+    height: 50vh;
+    width: 100%;
+    margin-top: 5rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap ;
+
+    background-color: #ac39ea;
+    color: white;
+
+
+    h1{
+        font-size: 3rem;
+        
+        text-align: center;
+    }
+    p{
+        max-width: 400px;
+        font-family: $primary-font;
+        text-align: center;
+       
+    }
+    .about-company{
+        // max-width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    // flex-wrap: wrap ;
+
+        .footer-container{
+            text-align: center;
+            p{
+                font-family: $primary-font;
+                padding-bottom: 10px;
+            }
+        }
+        h1{
+            font-size: 2rem;
+            padding: 1rem;
+        }
+    }
+}

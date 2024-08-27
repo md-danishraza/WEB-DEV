@@ -1,0 +1,41 @@
+.project{
+    .title{
+        margin-top: 2rem;
+        margin-left: 5rem;
+
+        font-family: $main-font;
+        font-size: 80px;
+        color: white;
+        font-weight: lighter;
+
+        span{
+            background-color: $label-color;
+        }
+    }
+
+    .images{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    img{
+        width: 200px;
+        height: 100vh;
+
+        margin: 30px 10px;
+    }
+    .img-one{
+        transform: translateY(200px);
+    }
+    .img-two{
+        transform: translateY(150px);
+    }
+    .img-three{
+        transform: translateY(100px);
+    }
+    .img-four{
+        transform: translateY(50px);
+    }
+}
