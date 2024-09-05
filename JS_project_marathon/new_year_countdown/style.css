@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+}
+
+body{
+    background-color:plum;
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    color: white;
+    font-family: cursive;
+}
+body h1:first-of-type{
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+.new-year{
+    font-size: 100px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: 50px; */
+    background-color: rgba(0, 0, 0, .2);
+
+    padding: 20px;
+
+    text-align: center;
+}
+.container div{
+    margin: 0 40px;
+}

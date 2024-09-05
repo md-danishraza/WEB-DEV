@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+}
+
+span{
+    background: url("https://cdn2.iconfinder.com/data/icons/free-1/128/Love__heart_like-1024.png");
+
+    height: 100px;
+    width: 100px;
+
+    /* border-radius: 100%; */
+
+    /* center to document */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* adjusting within its half length relative */
+    transform: translate(-50%,-50%);
+    
+    background-size: cover;
+
+    /* this will  */
+    /* You’ll often use this value when you want to make an element essentially “unclickable.” It won’t respond to any mouse or touch events. */
+    pointer-events: none;
+
+
+    animation: animate 5s linear;
+
+}
+
+@keyframes animate {
+    0%{
+        /* center in starting */
+        transform: translate(-50%,-50%);
+        opacity: 1;
+        filter: hue-rotate();
+    }
+    100%{
+        /* go above vanish in ending */
+        transform: translate(-50%,-2000%);
+        opacity: 0;
+        filter: hue-rotate();
+
+    }
+}

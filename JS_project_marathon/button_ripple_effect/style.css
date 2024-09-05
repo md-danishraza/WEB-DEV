@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 80vh;
+}
+.container{
+   
+    position: relative;
+
+}
+.container button{
+    font-size: 2rem;
+    font-weight: lighter;
+
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+
+    background-color: salmon;
+
+    overflow: hidden;
+}
+.container button span{
+    position: relative;
+    z-index: 1;
+}
+.container button::before{
+    content: "";
+    position: absolute;
+
+    top: var(--x);
+    left: var(--y);
+    transform: translate(-50%,-50%);
+
+    width: 0;
+    height: 0;
+
+    border-radius: 50%;
+
+    background-color: orangered;
+}
+
+
+.container button:hover{
+    cursor: pointer;
+}
+
+.container button:hover::before{
+    transition: .5s;
+    width: 200px;
+    height: 200px;
+}

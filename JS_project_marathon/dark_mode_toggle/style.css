@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    transition: .4s;
+}
+.input{
+    display: none;
+}
+
+.label{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+
+    position: absolute;
+    /* z-index: 1; */
+    background-color: gainsboro;
+
+    cursor: pointer;
+}
+
+.circle{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+
+    position: absolute;
+    background-color: white;
+    left: 3px;
+    top: 3px;
+}
+.input:checked + .label{
+    /* background-color: salmon; */
+}
+
+/* setting keyframs */
+@keyframes toggleOn {
+    0%{
+        transform: translateX(0);
+        background-color: rgba(0, 0, 0, .2);
+    }
+    100%{
+        transform: translateX(40px);
+        background-color: rgba(0, 0, 0, .8);
+    }
+}
+@keyframes toggleOff {
+    0%{
+        transform: translateX(40px);
+        background-color: rgba(0, 0, 0, .8);
+    }
+    100%{
+        transform: translateX(0);
+        background-color: rgba(0, 0, 0, .2);
+    }
+}
+
+/* setting animation */
+.input:checked + .label .circle {
+    animation: toggleOn 0.3s ease-in-out forwards;
+    /* animation-fill-mode: forwards; */
+}
+.input:not(:checked) + .label .circle {
+    animation: toggleOff 0.3s ease-in-out forwards;
+    /* /* animation-fill-mode: forwards; */
+}
+    

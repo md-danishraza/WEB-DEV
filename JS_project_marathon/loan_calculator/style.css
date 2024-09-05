@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Courier New', Courier, monospace;
+}
+.container{
+    padding: 40px 20px;
+
+    background-color: darkcyan;
+    border-radius: 10px;
+}
+.container h1{
+    color: white;
+    text-align: center;
+    margin: 0 0 20px 0;
+    letter-spacing: 3px;
+
+}
+.container p{
+    color: white;
+    font-weight: lighter;
+}
+.container input{
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+p span{
+    font-weight: bolder;
+    color : white;
+    font-size: 2rem;
+
+}

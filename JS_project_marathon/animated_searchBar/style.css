@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: aliceblue;
+}
+
+
+.searchBar-container{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: aliceblue;
+    padding: 10px;
+
+    height: 50px;
+    width: 300px;
+    border-radius: 50px;
+
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2),
+                -6px -6px 10px rgba(255, 255, 255,.9);
+
+    margin: 10px;
+
+    position: relative;
+
+    transition: width 1s;
+}
+
+.magnifier{
+    width: 40px;
+
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+
+}
+.mic{
+    width: 40px;
+
+    position: absolute;
+    right: 20px;
+
+    transition: width .4s;
+    transition-delay: .5s;
+}
+.input{
+    background-color: transparent;
+
+    margin: 10px 50px;
+    padding: 10px;
+
+    outline: none;
+    border: none;
+
+    font-size: 1rem;
+    font-family: cursive;
+    color: darkblue;
+
+    width: 100%;
+    transition: width .4s;
+    /* transition-delay: .5s; */
+}
+
+/* when active using js */
+.active.searchBar-container{
+    
+    width: 50px;
+}
+.active .mic{
+    /* display: none; */
+    width: 0;
+
+
+    transition: opacity 0.5s ease-in-out;
+}
+.active .input{
+    /* display: none; */
+    width: 0;
+}
+.active .magnifier{
+    /* position: ; */
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%,-50%);
+
+    transition: opacity 0.5s ease-in-out;
+}
