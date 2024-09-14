@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: lightblue;
+}
+h1{
+    font-size: 50px;
+
+}
+.dice{
+    font-size: 100px;
+    margin: 10px 0;
+
+    animation-duration: 1s;
+    /* animation will be infinite but will remove it using js */
+    animation-fill-mode: forwards;
+}
+.roll-animation{
+    animation-name: roll ;
+}
+
+@keyframes roll{
+    0%{
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(720deg) rotateY(720deg);
+        /* transform: rotate(720deg, 720deg); */
+    }
+}
+button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#clear-btn{
+    margin-top: 10px;
+    background-color: red;
+}
+button:hover{
+    transition: all 0.5s ;
+    transform: translate(-2px,-2px);
+    box-shadow: 2px 2px 5px black;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+ul li{
+    width: 500px;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 30px;
+    background-color: aliceblue;
+    box-shadow: 0 2px 5px gray ;
+
+    position: relative;
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    font-size: 50px;
+}

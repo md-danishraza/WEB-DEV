@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: cursive;
+}
+
+
+body{
+    height: 100vh;
+    background-color: salmon;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.clock{
+    width: 350px;
+    height: 350px;
+
+    background-color: gainsboro;
+    border-radius: 50%;
+    border: 5px solid darkgray;
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .7);
+
+    position: relative;
+}
+
+img{
+    width: 100px;
+
+    position: absolute;
+    top: 100px;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    z-index: 2;
+}
+
+.numbers div{
+    font-size: 40px;
+    font-weight: bolder;
+
+    position: absolute;
+    color: lightcyan;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .7);
+
+    z-index: 2;
+
+}
+.twelve{
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.three{
+    transform: translate(-50%,-50%);
+    top: 50%;
+    right: 10px;
+}
+.six{
+    transform: translate(-50%,-50%);
+    left: 50%;
+    bottom: -15px;
+}
+.nine{
+    transform: translate(-50%,-50%);
+    left: 30PX;
+    top: 50%;
+}
+
+
+.arrows{
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.arrows::before{
+    content: "";
+
+    position: absolute;
+    z-index: 4;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: darkgreen;
+
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+}
+
+.arrows div{
+    position: absolute;
+
+    width: 7px;
+    height: 100PX;
+
+    background-color: white;
+    transform-origin: bottom center;
+
+    bottom: 50%;
+    z-index: 3;
+
+    border-radius: 50% 50% 0 0;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+}
+.arrows .hour{
+    height: 80px;
+    width: 9px;
+    transform: rotate(45deg);
+}
+.arrows .second{
+    height: 120px;
+    width: 5px;
+    background-color: goldenrod;
+    transform: rotate(-60deg);
+}
