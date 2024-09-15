@@ -9,39 +9,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
         <div class="container">
             <a href="nowhere" class="navbar-brand">Frontend Bootstrap</a>
-
+    
             <!-- hamburger button -->
-            <button class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#navmenu" type="button">
-                <!-- toggler icon -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="navbar navbar-collapse d-flex-lg flex-row-reverse" id="navmenu">
-                <ul class="navbar-nav">
+    
+            <!-- Collapsible menu -->
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item me-3">
                         <a href="#learn" class="nav-link">Learn</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a href="#learn" class="nav-link">About</a>
+                        <a href="#about" class="nav-link">About</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a href="#learn" class="nav-link">More</a>
+                        <a href="#more" class="nav-link">More</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
+    
     <!-- showcase -->
     <section class="showcase bg-dark text-white p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
         <div class="container">
             <!-- flex containing two item -->
             <div class="d-sm-flex align-items-center justify-content-between">
                 <div class="">
-                    <h1>Become a <span class="text-warning">Web Developer</span></h1>
+                    <h1>I am a <span class="text-warning">Web Developer</span></h1>
                     <p class="lead py-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla minima incidunt excepturi itaque libero, eveniet aut, corporis, non alias molestiae iste enim accusantium suscipit maiores odit quo perspiciatis cumque ipsam?</p>
                     <button class="btn btn-primary btn-lg " type="button" data-bs-toggle="modal" data-bs-target="#modal">Submit the form</button>
                     </div>
@@ -281,8 +282,8 @@
    <!-- contact and map -->
    <section class="p-5">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-md">
+            <div class="row g-4 ">
+                <div class="col-md ">
                     <h2 class="text-center mb-4">Contact Info</h2>
 
                     <ul class="list-group list-group-flush lead">
@@ -294,9 +295,11 @@
                         
                       </ul>
                 </div>
-                <div class="col-md">
-                    <img src="img/Screenshot 2024-08-04 090822.png" alt="" class="img-fluid rounded shadow">
-                </div>
+              
+                <div class="col-md ">
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79285.99670758376!2d77.1742039946716!3d28.57038969554079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1726298071427!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div> 
             </div>
         </div>
    </section>

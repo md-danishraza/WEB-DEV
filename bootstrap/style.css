@@ -4,6 +4,17 @@
     padding: 50px;
 }
 
+iframe{
+    height: 300px;
+    width: 400px;
+}
+@media screen and (max-width: 500px) {
+    iframe{
+        height: 200px;
+        width: 300px;
+    }
+}
+
 @media(min-width: 768px){
     /* medium and above */
     .input-group{
@@ -15,6 +26,7 @@
         box-sizing: border-box;
         border: 5px solid rgb(31, 143, 208);
     }
+    
 }
 
 
