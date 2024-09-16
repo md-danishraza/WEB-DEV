@@ -1,0 +1,65 @@
+$default-font-color: black;
+$background-color: #4a90e2;
+$container-bgcolor: #f2f2f2;
+$container-bordercolor: black;
+$textbox-bordercolor: lightgray;
+$button-textcolor: #fff;
+$button-hovercolor: black;
+$add-buttoncolor: rgb(51, 222, 51);
+$clear-buttoncolor:orangered;
+
+
+
+@mixin mq($size){
+    @media screen and (min-width: $size){
+        @content;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-size: 16px;
+    font-family: "Monstserrrat",serif;
+
+    color: $default-font-color;
+
+    width: 100%;
+    min-width: 100%;
+
+    min-height: 100vh;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-repeat: no-repeat;
+
+    // setting base font-size so that we can use rem units 
+    @include mq(768px){
+        font-size: 22px;
+    }
+}
+
+body{
+    padding: 20px;
+    background-color: $background-color;
+}
+
+section{
+    background-color: $container-bgcolor;
+    width: 90%;
+    max-width: 700px;
+
+    margin: auto;
+
+    border: 1px solid $container-bordercolor;
+    border-radius: 10px;
+}
+
+
+.newItemEntry,.listContainer{
+  
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5) , -2px -2px 5px rgba(255, 255, 255, .5);
+}
