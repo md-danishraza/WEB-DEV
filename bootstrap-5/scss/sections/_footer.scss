@@ -1,0 +1,122 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.footer {
+    // margin-top: 1rem;
+    background-color: $footercolor;
+
+    .contact-box{
+        position: relative;
+        color: white ;
+        justify-content: center;
+        align-items: center;
+
+        .icon{
+            // position: absolute;
+            left: 0;
+            // font-size: 2rem;
+            width: 4rem;
+            stroke: $primary;
+            @include media-breakpoint-down(sm){
+
+                width: 2rem;
+            }
+
+        }
+        
+        .info{
+            padding: 0.4rem;
+            font-weight: bold ;
+
+            .title{
+                text-decoration: none;
+                color: white;
+                font-size: 1.4rem;
+                @include media-breakpoint-down(sm){
+                    font-size: 1rem;
+                }
+            }
+
+            .subtitle{
+                color: lightgray;
+
+                @include media-breakpoint-down(md){
+                    text-align: center;
+                    font-size: .7rem;
+                }
+            }
+        }
+    }
+
+    // social media content
+    .footer-sm{
+        background-color: #444242;
+
+        .title{
+            font-size: 1.5rem;
+            font-weight: normal;
+            color: white;
+            padding-bottom: .5rem;
+            text-align: center;
+
+            @include media-breakpoint-down(sm){
+                font-size: 1rem;
+                padding-right: 1.5rem;
+            }
+        }
+        .icon{
+            i{
+                color: white;
+                font-size: 3rem;
+                padding-right: 2rem;
+
+                @include media-breakpoint-down(sm){
+                    font-size: 2rem;
+                    padding-right: 1rem;
+                }
+            }
+        }
+    }
+
+    .company{
+        h5{
+            @include media-breakpoint-down(sm){
+                font-size: 1rem
+            }
+        }
+        p{
+            @include media-breakpoint-down(sm){
+                font-size: .8rem
+            }
+            
+        }
+        li{
+           
+            
+            a{
+                color: white;
+                font-size: 1rem;
+                text-decoration: none;
+                @include media-breakpoint-down(sm){
+                    font-size: .8rem;
+                }
+
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+
+
+    }
+    .copyright{
+        color: white;
+        a{
+            color: $secondary;
+        }
+
+        @include media-breakpoint-down(sm){
+            font-size: .8rem;
+        }
+    }
+}

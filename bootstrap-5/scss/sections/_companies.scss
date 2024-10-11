@@ -1,0 +1,32 @@
+@use "../custom" as *;
+
+
+
+
+.logobox{
+    margin-bottom: 4rem;
+    padding: .5rem;
+    max-width: 100%;
+    
+    
+    text-align: center;
+    
+    img{
+        height: 2rem;
+
+        &:hover{
+            scale: 1.2;
+            transition: all 0.5s; 
+        }
+    }
+    
+    @include media-breakpoint-down(sm){
+        margin-bottom: 2rem;
+        padding: 1rem;
+
+        img{
+            height: 3rem;
+        }
+    }
+
+}

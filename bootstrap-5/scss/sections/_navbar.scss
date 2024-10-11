@@ -1,0 +1,41 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.menu{
+    @include gradient;
+
+    
+
+   
+    .navbar-nav .nav-link{
+        padding: 0 1rem;
+
+        // below sm 
+        @include media-breakpoint-down(sm){
+            padding: .5rem;
+        }
+
+        color: white;
+        font-weight: 600;
+        text-transform: capitalize;
+
+
+
+
+        &:hover{
+            transition: all .3s;
+            font-size: 1.2rem;
+            text-shadow: 2px 2px 2px black;;
+            transform: translateY(-.3rem);
+        }
+    }
+    
+}
+
+#logo{
+    height: auto;
+    height: 60px;
+
+    padding: 0;
+    filter:invert(100%);
+}

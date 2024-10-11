@@ -1,0 +1,44 @@
+@use "../custom" as *;
+
+
+.services{
+    padding: 1rem 0;
+    position: relative;
+
+
+
+    &.content{
+        padding: 1rem;
+        margin-top: 5rem;
+
+        @include media-breakpoint-down(sm){
+            margin-top: 1rem;
+        }
+
+        .icon{
+            font-size: 2.5rem;
+            color: $primary;
+
+            
+           
+        }
+    }
+
+    &.pic{
+        max-width: 100%;
+
+        @include media-breakpoint-down(sm){
+            max-width: 75%;
+            margin: 0;
+            padding: 0;
+            
+        }
+    }
+
+    @include media-breakpoint-down(sm){
+        padding: 0;
+        margin: 0;
+        
+    }
+
+}

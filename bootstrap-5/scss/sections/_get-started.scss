@@ -1,0 +1,35 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.get-started{
+    background-color: $gray-200 ;
+    margin-top: 5rem;
+    padding: 4rem 0;
+
+    .picture{
+        @include gradient;
+
+        .cta-info{
+            padding: 3rem;
+            margin: 1rem 0;
+
+            .list{
+                position: relative;
+                padding: 0;
+                list-style-type: none;
+                display: block ;
+
+            
+
+                li::before{
+                        content: "\2713 ";
+                        color: white;
+                        font-size: 2rem;
+                        margin-right: 5px; 
+                }
+            }
+        }
+    }
+
+
+}

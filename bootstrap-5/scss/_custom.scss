@@ -1,0 +1,52 @@
+// overriding default bootstrap variables for our customizations
+
+// my theme colors
+$purple-dark:  #00DBDE ;
+$purple-light:  #FC00FF ;
+$pink:    #d122e3 ;
+$footercolor: #151414;
+// $purple-dark:  #9926f0 ;
+// $purple-light:  #bb6ef5 ;
+// $pink:    #d122e3 ;
+// $footercolor: #151414;
+
+
+
+// white and gray colors
+$white:    #fff ;
+$gray-100: #f8f9fa ;
+$gray-200: #e9ecef ;
+$gray-300: #dee2e6 ;
+$gray-400: #ced4da ;
+$gray-500: #adb5bd ;
+$gray-600: #6c757d ;
+$gray-700: #495057 ;
+$gray-800: #343a40 ;
+$gray-900: #212529 ;
+$black:    #000 ;
+
+
+$primary:       $purple-dark;
+$secondary:     $pink;
+
+
+// accordian
+$accordion-icon-color:                    $primary;
+$accordion-icon-active-color:             $secondary;
+$accordion-padding-y:                     1.5rem ;
+$accordion-padding-x:                     1.5rem ;
+
+
+// $accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-color}' stroke-linecap='round' stroke-linejoin='round'><path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16'/><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4'/></svg>") ;
+// $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-active-color}' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>") ;
+
+$accordion-button-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-color}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='8' y1='1' x2='8' y2='15'/%3E%3Cline x1='1' y1='8' x2='15' y2='8'/%3E%3C/svg%3E");
+
+$accordion-button-active-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-active-color}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='1' y1='8' x2='15' y2='8'/%3E%3C/svg%3E");
+
+
+
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

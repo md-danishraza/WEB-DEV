@@ -1,0 +1,76 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+
+.intro-section{
+    @include gradient;
+
+    padding-top: 7rem;
+    height: 100%;
+    
+
+    .intros{
+        .video-box{
+            a{
+                i{
+                    font-size: 5rem;
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}
+
+.border-animation{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: .5rem solid white;
+
+    top: 0;
+    left: 0;
+
+    animation: pulse-border 1.5s linear infinite ;
+
+    &.border-1{
+        animation-delay: 0;
+    }
+    &.border-2{
+        animation-delay: .5s;
+    }
+}
+
+video{
+    position: absolute;
+    // display: none;
+    left:50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 22rem;
+
+
+}
+
+#close {
+    position: absolute;
+    top: 15%;
+    right: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    z-index: 10;
+
+
+    @include media-breakpoint-down(sm){
+        right: 5%;
+        top: 18%;
+    }
+
+    &:hover{
+        color: $primary;
+    }
+}
