@@ -826,9 +826,7 @@ nav{
                 line-height: 3rem;
             }
 
-            form{
-                
-            }
+            
         }
     }
 }
@@ -901,12 +899,12 @@ footer{
 
 
 @media (min-width: 540px){
-    .section__container{
+    .footer__container{
         grid-template-columns: 1fr 1fr ;
     }
 }
 @media (min-width: 768px){
-    .section__container{
+    .footer__container{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
