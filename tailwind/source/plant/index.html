@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" >
+    <title>Plant Site</title>
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="D:\webdev\projects\tailwind\dist\plant_output.css">
+
+    <!-- swiper -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+
+</head>
+<body>
+    <header id="navbar" class="bg-green-950 fixed top-0 left-0 w-full z-50">
+        <nav class="container flex items-center justify-between h-16 sm:h-20 p-0 lg:p-[32px]">
+            <div class="logo font-lobster sm:text-2xl">IndiPlants</div>
+
+            <div id="nav-menu" class="absolute top-0 -left-[100%] md:static overflow-hidden h-[80vh] md:h-fit md:w-fit w-full bg-green-950/80 backdrop-blur-sm duration-300 flex items-center justify-center">
+                <ul class="flex flex-col items-center gap-8 md:flex-row">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#popular" class="nav-link">Popular</a></li>
+                    <li><a href="#review" class="nav-link">Review</a></li>
+
+                </ul>
+
+                <div class="opacity-90 absolute -top-10 -left-10 rotate-180 md:hidden">
+                    <img src="images/leaf-1.png" alt="" class="w-32">
+                </div>
+                <div class="opacity-90 absolute bottom-0 -right-10 -rotate-45 md:hidden">
+                    <img src="images/leaf-2.png" alt="" class="w-32">
+                </div>
+            </div>
+
+            <div class="text-xl sm:text-3xl cursor-pointer z-10 hover:text-pink-500 duration-300 md:hidden">
+                <i class="ri-menu-4-line" id="hamburger"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- home -->
+        <section id="home" class="relative overflow-hidden ">
+            <div class="container mt-10 md:mt-0">
+                <!-- blob -->
+                <div class="size-64 bg-yellow-500 opacity-20 blur-3xl absolute -z-10 top-0 left-0"></div>
+                <div class="size-64 bg-yellow-500 opacity-20 blur-3xl absolute -z-10 top-1/2 left-1/2"></div>
+
+                <div class="flex flex-col gap-5 items-center lg:flex-row">
+                    <!-- content -->
+                    <div class="home_content w-full space-y-5 lg:w-1/2">
+                        <h1>
+                            <span class="text-pink-500">Plants</span> make a <br>
+                                positive 
+                            <span class="text-pink-500">impact</span> on <br>
+                                your environment
+                        </h1>
+
+                        <p class="text-slate-300 font-lobster ">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, rerum doloribus! Consequatur, veniam officiis, placeat rem odio ab quaerat voluptas facilis laborum fugit ad sapiente numquam veritatis doloribus! Sed, harum?
+                        </p>
+
+                        <div class="flex md:gap-4 lg:pt-4 xl:pt-8 gap-2">
+                            <button class="btn">
+                                <span>Shop Now</span>
+                                <i class="ri-leaf-line"></i>
+                            </button>
+                            <button class="btn outline">
+                                <span>Know More</span>
+                                <i class="ri-leaf-line"></i>
+                            </button>
+                        </div>
+
+                        <p class="text-xs font-lobster text-slate-300">
+                            You will get 30-days free trial.
+                        </p>
+
+                        <div class="flex gap-4 items-center text-lg md:text-4xl xl:pt-10">
+                            <i class="ri-facebook-fill  hover:text-pink-500 duration-300"></i>
+                            <i class="ri-twitter-x-line  hover:text-pink-500 duration-300"></i>
+                            <i class="ri-instagram-line  hover:text-pink-500 duration-300"></i>
+                            <i class="ri-linkedin-fill  hover:text-pink-500 duration-300"></i>
+                        </div>
+                    </div>
+                    <!-- img -->
+                    <div class="w-full relative lg:w-1/2 home_image">
+                        <img src="images/home.png" alt="" class="drop-shadow-yellow ">
+
+                        <!-- leaf -->
+                        <div class="absolute -top-10 lg:-top-5 right-0 opacity-30 animate-moveY">
+                            <i class="ri-leaf-line text-6xl text-pink-500"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 opacity-30 animate-rotate">
+                            <i class="ri-flower-line ri-leaf-line text-6xl text-pink-500"></i>
+                        </div>
+                        <div class="absolute -top-5 left-0 opacity-30 animate-scale">
+                            <i class="ri-plant-line ri-leaf-line text-6xl text-pink-500"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- services -->
+        <section id="services" class="bg-white text-green-900 py-20">
+            <div class="container w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- card-one -->
+                <div class="border-2 border-green-900 p-5 cursor-pointer rounded-md hover:shadow-2xl -hover:translate-y-1 duration-300 space-y-4 service_cards">
+                    <div class="flex gap-5 items-center">
+                        <i class="ri-truck-line text-3xl md:text-4xl lg:text-5xl"></i>
+                        <p class="md:text-lg font-bold">
+                            Fast <br>
+                            Delivery
+                        </p>
+                    </div>
+                    <p class="font-lobster">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat expedita ullam dolor voluptatem dignissimos nemo tempora, incidunt similique optio neque? 
+                    </p>
+                </div>
+                <!-- card-two -->
+                <div class="border-2 border-green-900 p-5 cursor-pointer rounded-md hover:shadow-2xl -hover:translate-y-1 duration-300 space-y-4 service_cards">
+                    <div class="flex gap-5 items-center">
+                        <i class="ri-customer-service-line text-3xl md:text-4xl lg:text-5xl"></i>
+                        <p class="md:text-lg font-bold">
+                            Great Customer <br>
+                            Service
+                        </p>
+                    </div>
+                    <p class="font-lobster">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat expedita ullam dolor voluptatem dignissimos nemo tempora, incidunt similique optio neque? 
+                    </p>
+                </div>
+                <!-- card-three -->
+                <div class="border-2 border-green-900 p-5 cursor-pointer rounded-md hover:shadow-2xl -hover:translate-y-1 duration-300 space-y-4 service_cards">
+                    <div class="flex gap-5 items-center">
+                        <i class="ri-plant-line text-3xl md:text-4xl lg:text-5xl"></i>
+                        <p class="md:text-lg font-bold">
+                            Original <br>
+                            Plants
+                        </p>
+                    </div>
+                    <p class="font-lobster">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat expedita ullam dolor voluptatem dignissimos nemo tempora, incidunt similique optio neque? 
+                    </p>
+                </div>
+                <!-- card-four -->
+                <div class="border-2 border-green-900 p-5 cursor-pointer rounded-md hover:shadow-2xl -hover:translate-y-1 duration-300 space-y-4 service_cards">
+                    <div class="flex gap-5 items-center">
+                        <i class="ri-money-rupee-circle-line text-3xl md:text-4xl lg:text-5xl"></i>
+                        <p class="md:text-lg font-bold">
+                            Affordable <br>
+                            Price
+                        </p>
+                    </div>
+                    <p class="font-lobster">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat expedita ullam dolor voluptatem dignissimos nemo tempora, incidunt similique optio neque? 
+                    </p>
+                </div>
+
+        </section>
+
+        <!-- about -->
+        <section id="about" class="py-20 relative overflow-hidden">
+
+            <!-- leaf -->
+            <div class="absolute -right-10 -top-5 opacity-50 aboutUs_leaf">
+                <img src="images/leaf-3.png" class="w-40 md:w-52 lg:w-64" alt="">
+            </div>
+
+            <div class="flex flex-col items-center pb-10 lg:pb-20 gap-3 aboutUs__title">
+                <h2 class="title">About Us</h2>
+                <p class="max-w-2xl">Follow Instruction for more</p>
+            </div>
+
+            <div class="container space-y-10 xl:space-y-0">
+                <!-- item 1-->
+                <div class="flex flex-col lg:flex-row-reverse gap-5 items-center">
+                    <div class="w-full lg:w-1/2">
+                        <img src="images/plant-1.png" alt="" class="drop-shadow-yellow aboutUs__image-1">
+                    </div>
+                    <!-- content -->
+                    <div class="w-full lg:w-1/2 aboutUs_content-1">
+                        <div class="space-y-5">
+                            <h3>
+                                Make your <span class="text-pink-500">organic</span>  <br>
+                                garden
+                            </h3>
+                            <p class="font-lobster text-slate-300">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo quis deleniti minima eaque non quod ratione, saepe voluptatem repellat! Enim quas molestias eligendi dolorem illum tenetur ipsum nisi minima voluptate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- item 2-->
+                <div class="flex flex-col lg:flex-row gap-5 items-center">
+                    <div class="w-full lg:w-1/2">
+                        <img src="images/plant-2.png" alt="" class="drop-shadow-yellow aboutUs__image-2">
+                    </div>
+                    <!-- content -->
+                    <div class="w-full lg:w-1/2 aboutUs_content-2">
+                        <div class="space-y-5">
+                            <h3>
+                                Come with us <br>
+                                <span class="text-pink-500">grow up</span> 
+                                your plant
+                            </h3>
+                            <p class="font-lobster text-slate-300">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo quis deleniti minima eaque non quod ratione, saepe voluptatem repellat! Enim quas molestias eligendi dolorem illum tenetur ipsum nisi minima voluptate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- popular -->
+        <section id="popular" class="py-20 bg-green-800">
+            <div class="flex flex-col items-center pb-48 lg:pb-40 gap-3 popular__title">
+                <h2 class="title">Your Choice Plant</h2>
+                <p class="max-w-2xl">Follow Instruction for more</p>
+            </div>
+
+            <div class="container w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-36">
+                <!-- card-1 -->
+                <div class="p-10 pt-24 rounded-md bg-green-950 relative popular__card ">
+                    <img src="images/cart-1.png" alt="" class="w-56 absolute -top-5 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <p class="italic">Nephrolepsis Exaltata</p>
+                    <h3>Boston Fern</h3>
+
+                    <div class="ratings text-sm text-pink-500 py-3">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                        <i class="ri-star-line text-gray-400"></i>
+                        <i class="ri-star-line text-gray-400"></i>
+                        <i class="ri-star-line text-gray-400"></i>
+                    </div>
+
+                    <div class="pricing flex justify-between items-center">
+                        <p class="text-xl">₹399</p>
+                        <button class="py-1 px-2 rounded-sm bg-pink-500 text-xl">
+                            <i class="ri-shopping-cart-fill"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- card-2 -->
+                <div class="p-10 pt-24 rounded-md bg-green-950 relative popular__card ">
+                    <img src="images/cart-2.png" alt="" class="w-56 absolute -top-5 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <p class="italic">Ficus elastica</p>
+                    <h3>Rubber Plant</h3>
+
+                    <div class="ratings text-sm text-pink-500 py-3">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                        <i class="ri-star-line text-gray-400"></i>
+                        <i class="ri-star-line text-gray-400"></i>
+                    </div>
+
+                    <div class="pricing flex justify-between items-center">
+                        <p class="text-xl">₹499</p>
+                        <button class="py-1 px-2 rounded-sm bg-pink-500 text-xl">
+                            <i class="ri-shopping-cart-fill"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- card-3 -->
+                <div class="p-10 pt-24 rounded-md bg-green-950 relative popular__card ">
+                    <img src="images/cart-3.png" alt="" class="w-56 absolute -top-5 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <p class="italic">Spathiphyllum wallisii</p>
+                    <h3>Peace Lily</h3>
+
+                    <div class="ratings text-sm text-pink-500 py-3">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        
+                        <i class="ri-star-half-fill"></i>
+                        <i class="ri-star-line text-gray-400"></i>
+                    </div>
+
+                    <div class="pricing flex justify-between items-center">
+                        <p class="text-xl">₹999</p>
+                        <button class="py-1 px-2 rounded-sm bg-pink-500 text-xl">
+                            <i class="ri-shopping-cart-fill"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- card-4 -->
+                <div class="p-10 pt-24 rounded-md bg-green-950 relative popular__card ">
+                    <img src="images/cart-4.png" alt="" class="w-56 absolute -top-5 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <p class="italic">Adenium obesum</p>
+                    <h3>Desert Rose</h3>
+
+                    <div class="ratings text-sm text-pink-500 py-3">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                        
+                        <i class="ri-star-line text-gray-400"></i>
+                    </div>
+
+                    <div class="pricing flex justify-between items-center">
+                        <p class="text-xl">₹899</p>
+                        <button class="py-1 px-2 rounded-sm bg-pink-500 text-xl">
+                            <i class="ri-shopping-cart-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- reviews -->
+        <section id="review" class="py-20 pb-32 relative overflow-hidden">
+            <!-- leaf -->
+            <div class="absolute opacity-50 -left-8 -top-10 review_leaf">
+                <img src="images/leaf-4.png" class="w-40 md:w-52 lg:w-64" alt="">
+            </div>
+
+
+            <div class="flex flex-col items-center pb-10 lg:pb-20 gap-3 review__title">
+                <h2 class="title">Customer Review</h2>
+                <p class="max-w-2xl">Follow Instruction for more</p>
+            </div>
+
+            <div class="container ">
+                <div class="swiper py-12">
+                    <ul class="swiper-wrapper py-10">
+                        <!-- review-1 -->
+                        <li class="swiper-slide">
+                            <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                                <p class="font-lobster">
+                                    "I never knew my living room could transform into a lush paradise until I surrounded myself with indoor plants! From the moment I brought home my first fiddle leaf fig, I felt the immediate embrace of nature—my air became fresher, my mind clearer, and my spirit lifted.
+                                </p>
+                                <div class="flex items-center gap-2">
+                                    <img src="images/review-1.jpg" alt="" class="size-12 rounded-full object-cover object-center">
+                                    <div>
+                                        <p class="text-pink-500 uppercase">Milo</p>
+                                        <p>Designer</p>
+                                    </div>
+                                    <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                                </div>
+                            </div>
+
+                        </li>
+                        <!-- review-2 -->
+                        <li class="swiper-slide">
+                            <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                                <p class="font-lobster">
+                                    Each plant tells a story, flourishing like my own creative thoughts, and they have become my silent companions, reminding me to slow down and breathe. Who knew that a humble pothos could conjure memories of rainy Sunday mornings and that a vibrant peace lily could spark joy like a burst of laughter?
+                                </p>
+                                <div class="flex items-center gap-2">
+                                    <img src="images/review-2.jpg" alt="" class="size-12 rounded-full object-cover object-center">
+                                    <div>
+                                        <p class="text-pink-500 uppercase">Victor</p>
+                                        <p>Designer</p>
+                                    </div>
+                                    <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                                </div>
+                            </div>
+
+                        </li>
+                        <!-- review-3 -->
+                        <li class="swiper-slide">
+                            <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                                <p class="font-lobster">
+                                    "Transforming my living space into a vibrant sanctuary has been nothing short of magical, all thanks to my indoor plants! Each morning, as sunlight dances through the leaves, I’m greeted by a chorus of green, whispering tales of resilience and nature’s beauty.
+                                </p>
+                                <div class="flex items-center gap-2">
+                                    <img src="images/review-3.jpg" alt="" class="size-12 rounded-full object-cover object-center">
+                                    <div>
+                                        <p class="text-pink-500 uppercase">Sofia</p>
+                                        <p>Designer</p>
+                                    </div>
+                                    <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                                </div>
+                            </div>
+
+                        </li>
+                        <!-- review-4 -->
+                        <li class="swiper-slide">
+                            <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                                <p class="font-lobster">
+                                    My fiddle leaf fig, an ambitious diva, stretches toward the window, reminding me to pursue my dreams with fervor, while my humble pothos, the quiet sage, teaches me the art of adaptability as it gracefully trails along shelves. These underrated companions have not only purified my air but have also breathed life into my soul.
+                                </p>
+                                <div class="flex items-center gap-2">
+                                    <img src="images/review-4.jpg" alt="" class="size-12 rounded-full object-cover object-center">
+                                    <div>
+                                        <p class="text-pink-500 uppercase">Merry</p>
+                                        <p>Designer</p>
+                                    </div>
+                                    <i class="ri-double-quotes-r text-4xl ml-auto"></i>
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
+
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination "></div>
+
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footerr -->
+    <footer class="bg-pink-100 pt-20 md:pt-28 pb-10  text-green-950 relative">
+        <!-- newsletter -->
+        <div class="container text-white absolute z-10  inset-x-0 top-0 -translate-y-1/2">
+            <div class="bg-green-900 px-10 py-5 rounded-md space-y-5">
+                <h3 class="text-center newsletter__title">
+                    <span class="text-pink-500">Subscribe</span> to our newsletter
+                    
+                </h3>
+                <div class="flex flex-col md:flex-row gap-2">
+                    <input type="email" placeholder="Your Email Address" class="w-full rounded-md px-3 py-5 text-green-950 outline-none input">
+                    <button class="flex gap-1 rounded-md px-3 py-5 bg-green-950 justify-center duration-300 hover:text-pink-500 submitbtn">
+                        <span>Subscribe</span>
+                        <i class="ri-send-plane-2-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- socials -->
+        <div class="container mt-20 md:mt-10 mb-10">
+            <div class="relative border border-b border-green-500">
+                <div class="absolute inset-x-0 -translate-y-1/2 mx-auto max-w-fit">
+                    <div class="icons bg-pink-100 text-center text-lg md:text-2xl lg:text-4xl px-4">
+                        <i class="ri-facebook-fill hover:text-pink-500"></i>
+                        <i class="ri-twitter-x-line hover:text-pink-500"></i>
+                        <i class="ri-instagram-line hover:text-pink-500"></i>
+                        <i class="ri-linkedin-fill hover:text-pink-500"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- contents -->
+        <div class="container grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 text-center md:text-start links">
+            <!-- item-1 -->
+            <div>
+                <div class="text-green-700 text-center footer_leaf_icon">
+                    <i class="ri-leaf-fill text-7xl"></i>
+                    <p class="text-xl sm:text-2xl font-lobster">IndiPlants</p>
+                </div>
+            </div>
+            <!-- item-2 -->
+            <div>
+                <p class="mb-4 text-xl font-bold">Quick Links</p>
+                <div class="flex-col gap-1 flex">
+                    <a href="#">Plants</a>
+                    <a href="#">Flowers</a>
+                    <a href="#">Gardening</a>
+                    <a href="#">Seeds</a>
+                    <a href="#">Delivery</a>
+                </div>
+            </div>
+            <!-- item-3 -->
+            <div>
+                <p class="mb-4 text-xl font-bold">Our Services</p>
+                <div class="flex-col gap-1 flex">
+                    <a href="#">Tree Planting</a>
+                    <a href="#">Grass Cutting</a>
+                    <a href="#">Weeds Control</a>
+                    <a href="#">Project</a>
+                </div>
+            </div>
+            <!-- item-4 -->
+            <div>
+                <p class="mb-4 text-xl font-bold">Contact Us</p>
+                <div class="flex-col gap-1 flex">
+                    <a href="#">+91 4739563573</a>
+                    <a href="#">sample@gmail.com</a>
+                    <a>New Delhi, India</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- copyright -->
+        <div class="container text-center  pt-10 opacity-50">
+            <p class="font-medium">Copyright © 2023 IndiPlants. All rights reserved.</p>
+        </div>
+
+        <!-- bg floral -->
+        <div class="absolute left-0 bottom-0 opacity-30 overflow-hidden">
+            <img src="images/floral-1.png" alt="" class="w-full lg:w-1/2 object-cover object-center">
+        </div>
+    </footer>
+
+    <!-- scroll btn -->
+    <div class="fixed  right-4 -bottom-10 z-50" id="scrollbtn">
+        <a href="#" class="btn-scroll">
+            <i class="ri-arrow-up-line text-xl hover:text-2xl py-2 px-2 rounded-full bg-pink-500 hover:bg-pink-800 transition-all duration-500"></i>
+        </a>
+    </div>
+    
+
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="app.js"></script>
+
+
+
+</body>
+</html>

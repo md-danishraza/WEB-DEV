@@ -23,6 +23,7 @@ const scrollRevealOption = {
     origin : "top",
     distance : "50px",
     duration : 1000,
+    reset: true,
     
 }
 

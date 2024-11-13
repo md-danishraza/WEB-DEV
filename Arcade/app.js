@@ -78,7 +78,6 @@ cards.addEventListener("click", (event) => {
 });
 
 
-// scrollreveal
 const sr = new ScrollReveal();
 const options = {
     duration: 2000, origin: 'top', distance: '50px' 
