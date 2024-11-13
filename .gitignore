@@ -1,0 +1,26 @@
+
+# Dependency directories
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Build directories
+# dist/
+build/
+
+# Sensitive files
+.env
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+
+
+css_small_projects/
+Landing_pages/

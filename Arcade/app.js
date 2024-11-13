@@ -80,23 +80,36 @@ cards.addEventListener("click", (event) => {
 
 const sr = new ScrollReveal();
 const options = {
-    duration: 2000, origin: 'top', distance: '50px' 
+    duration: 2000, origin: 'top', distance: '50px' , reset:true,
 }
-sr.reveal('#left',{...options,origin: 'left'});
-sr.reveal('#right',{...options,origin: 'right'});
-// sr.reveal('.home{backgroung-',{...options,origin: 'right'});
-sr.reveal('.login img',{...options,origin: 'left'});
-sr.reveal('.login .login-page',{...options,origin: 'right'});
 
 sr.reveal('#catalogheading',{...options,});
 sr.reveal('.card',{...options,interval:500,});
-
 sr.reveal('.reviews .title',{...options,});
+sr.reveal('.footer__content>div',{...options,interval:500,});
+
+
+// Add media queries for smaller devices
+const mediaQuery = window.matchMedia('(max-width: 768px)');
+
+if (mediaQuery.matches) {
+    options['distance'] = '0px';
+}
+
+sr.reveal('#left',{...options,origin: 'left'});
+sr.reveal('#right',{...options,origin: 'right'});
+sr.reveal('.home{backgroung-',{...options,origin: 'right'});
+sr.reveal('.login img',{...options,origin: 'left'});
+sr.reveal('.login .login-page',{...options,origin: 'right'});
+
+
+
+
 sr.reveal('.reviews .img-container',{...options,origin: 'left'});
 sr.reveal('.reviews .info-container.one  ',{...options,origin: 'right'});
 sr.reveal('.reviews .img-container.two',{...options,origin: 'right'});
 sr.reveal('.reviews .info-container.two',{...options,origin: 'left'});
 
-sr.reveal('.footer__content>div',{...options,interval:500,});
+
 
 

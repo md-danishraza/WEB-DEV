@@ -15,45 +15,9 @@ navLinks.addEventListener('click',(event) => {
 
     navLinks.classList.toggle('open');
     menuBtnIcon.setAttribute("class", "ri-menu-line");  
-})
-
-
-// scroll reveal
-const scrollRevealOption = {
-    origin : "top",
-    distance : "50px",
-    duration : 1000,
-    reset: true,
-    
-}
-
-ScrollReveal().reveal(".header__container h1",{...scrollRevealOption,});
-ScrollReveal().reveal(".header__container form",{...scrollRevealOption,delay:500});
-ScrollReveal().reveal(".header__container img",{...scrollRevealOption,delay:1000});
-// cards
-ScrollReveal().reveal(".range__card",{
-    duration:1000,
-    interval: 500,
 });
 
-//location
-ScrollReveal().reveal(".location__content h2",{...scrollRevealOption});
-ScrollReveal().reveal(".location__content p",{...scrollRevealOption,delay:500});
-ScrollReveal().reveal(".location__btn",{...scrollRevealOption,delay:1000});
 
-ScrollReveal().reveal(".location__image",{origin:"right",distance:"100px",duration:1000});
-
-ScrollReveal().reveal(".story__card",{...scrollRevealOption,interval:500});
-
-// download
-ScrollReveal().reveal(".download__container .download__image",{...scrollRevealOption,origin:"right"});
-ScrollReveal().reveal(".download__container .section__header",{...scrollRevealOption,delay:500});
-ScrollReveal().reveal(".download__container .download__links",{...scrollRevealOption,delay:1000});
-
-// footerlinks
-ScrollReveal().reveal(".news__container .section__header",{origin:"left",distance:"100px",duration:1000});
-ScrollReveal().reveal(".news__container form",{origin:"right",distance:"100px",duration:1000});
-ScrollReveal().reveal(".footer__col",{...scrollRevealOption,interval:500});
 
 
 const selectCards = document.querySelectorAll(".select__card");
@@ -110,3 +74,47 @@ bannerContent.forEach(item => {
   duplicateNode.setAttribute("aria-hidden", "true");
   banner.appendChild(duplicateNode);
 })
+
+
+
+
+
+
+// scroll reveal
+const scrollRevealOption = {
+    origin : "top",
+    distance : "50px",
+    duration : 1000,
+    reset: true,
+    
+}
+
+ScrollReveal().reveal(".header__container h1",{...scrollRevealOption,});
+ScrollReveal().reveal(".header__container form",{...scrollRevealOption,delay:500});
+ScrollReveal().reveal(".header__container img",{...scrollRevealOption,delay:1000});
+// cards
+ScrollReveal().reveal(".range__card",{
+    duration:1000,
+    interval: 500,
+});
+
+//location
+ScrollReveal().reveal(".location__content h2",{...scrollRevealOption});
+ScrollReveal().reveal(".location__content p",{...scrollRevealOption,delay:500});
+ScrollReveal().reveal(".location__btn",{...scrollRevealOption,delay:1000});
+
+ScrollReveal().reveal(".location__image",{origin:"right",distance:"100px",duration:1000});
+
+ScrollReveal().reveal(".story__card",{...scrollRevealOption,interval:500});
+
+// download
+ScrollReveal().reveal(".download__container .download__image",{...scrollRevealOption,origin:"right"});
+ScrollReveal().reveal(".download__container .section__header",{...scrollRevealOption,delay:500});
+ScrollReveal().reveal(".download__container .download__links",{...scrollRevealOption,delay:1000});
+
+// footerlinks
+ScrollReveal().reveal(".news__container>h2",{origin:"left",distance:"100px",duration:1000});
+
+ScrollReveal().reveal(".footer__col",{...scrollRevealOption,interval:500});
+
+
