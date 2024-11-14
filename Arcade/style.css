@@ -8,6 +8,15 @@
 html {
   scroll-behavior: smooth;
 }
+/* nav,
+section,
+footer,
+#home,
+#login,
+#catalog {
+  position: relative;
+  overflow: hidden;
+} */
 
 :root {
   --blue: rgb(31, 136, 235);

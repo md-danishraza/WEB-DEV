@@ -94,6 +94,7 @@ const mediaQuery = window.matchMedia('(max-width: 768px)');
 
 if (mediaQuery.matches) {
     options['distance'] = '0px';
+    
 }
 
 sr.reveal('#left',{...options,origin: 'left'});

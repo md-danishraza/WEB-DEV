@@ -115,7 +115,7 @@ sr.reveal('.aboutUs_content-1',{origin:'left',distance: '200px'})
 
 sr.reveal('.popular__title');
 sr.reveal('.popular__card',{interval:200});
-sr.reveal('.popular__card img',{interval:200,scale:.5,delay:700});
+sr.reveal('.popular__card img',{interval:200,scale:.5,delay:700,origin:"center"});
 
 
 sr.reveal('.review__title');
