@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeslaClone</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./dist/style.css" />
+  </head>
+  <body>
+    <!-- discount-bar -->
+
+    <div class="fixed py-1 top-0 inset-x-0 bg-gray-100 z-10" id="top-bar">
+      <p class="text-center py-2 font-semibold">
+        0% APR available for qualified buyers.
+      </p>
+    </div>
+
+    <!-- header -->
+    <div class="py-6 md:py-2 px-10 mt-10 justify-between flex items-center">
+      <img src="images/logo.svg" alt="teslta" width="120" height="24" />
+      <button>
+        <i class="fa-solid fa-globe mr-2"></i><span class="font-bold">IND</span>
+      </button>
+    </div>
+
+    <!-- home -->
+    <main class="flex justify-between flex-col md:flex-row px-4 md:px-10">
+      <!-- images -->
+      <section class="w-full md:w-1/2 lg:w-3/4">
+        <div class="">
+          <!-- exterior image -->
+          <div
+            class="w-full bg-gray-200 flex items-center justify-center overflow-hidden mb-4 md:mb-0"
+          >
+            <img
+              class="max-w-full h-auto transform scale-150"
+              src="images/model-y-stealth-grey.jpg"
+              alt="Tesla Exterior"
+              id="exterior-image"
+            />
+          </div>
+          <!-- interior image -->
+          <div
+            class="w-full bg-gray-200 flex items-center justify-center overflow-hidden mb-4 md:mb-0"
+          >
+            <img
+              class="max-w-full h-auto transform scale-125"
+              src="images/model-y-interior-dark.jpg"
+              alt="Tesla interior"
+              id="interior-image"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- sidebar -->
+      <aside class="w-full lg:w-1/3 md:w-1/2 pl-0 md:pl-8 mt-6 md:mt-0">
+        <h1 class="text-3xl md:text-4xl text-center font-bold mb-5 md:mb-1">
+          Model Y
+        </h1>
+        <h2 class="text-lg md:text-xl text-center font-light">
+          Customize Your Car
+        </h2>
+
+        <!-- exterior btns -->
+        <div class="my-8 md:my-1" id="exterior-buttons">
+          <h2 class="font-semibold mb-2">Exterior colors</h2>
+          <div class="flex flex-wrap gap-2">
+            <button
+              class="btn-selected duration-300 hover:scale-110 transition"
+            >
+              <img
+                src="images/button-stealth-grey.avif"
+                alt="Stealth Gray"
+                class="w-10 md:w-6"
+              />
+            </button>
+            <button class="duration-300 hover:scale-110 transition">
+              <img
+                src="images/button-pearl-white.avif"
+                alt="Pearl White"
+                class="w-10 md:w-6"
+              />
+            </button>
+            <button class="duration-300 hover:scale-110 transition">
+              <img
+                src="images/button-deep-blue-metallic.avif"
+                alt="Deep Blue"
+                class="w-10 md:w-6"
+              />
+            </button>
+            <button class="duration-300 hover:scale-110 transition">
+              <img
+                src="images/button-solid-black.avif"
+                alt="Solid Black"
+                class="w-10 md:w-6"
+              />
+            </button>
+            <button class="duration-300 hover:scale-110 transition">
+              <img
+                src="images/button-ultra-red.avif"
+                alt="Ultra Red"
+                class="w-10 md:w-6"
+              />
+            </button>
+            <button class="duration-300 hover:scale-110 transition">
+              <img
+                src="images/button-quicksilver.avif"
+                alt="Quicksilver"
+                class="w-10 md:w-6"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- interior btn -->
+        <div class="my-8 md:my-1" id="interior-buttons">
+          <h2 class="font-semibold mb-2">Interior color</h2>
+          <div class="flex flex-wrap gap-2">
+            <button
+              class="btn-selected duration-300 hover:scale-110 transition"
+            >
+              <img
+                src="images/button-dark.avif"
+                alt="Dark"
+                class="w-10 md:w-6"
+              />
+            </button>
+            <button class="duration-300 hover:scale-110 transition">
+              <img
+                src="images/button-light.avif"
+                alt="Light"
+                class="w-10 md:w-6"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- wheels btn -->
+        <div class="mb-8 md:mb-2" id="wheel-buttons">
+          <h3 class="mb-2 font-semibold">Wheels</h3>
+          <button
+            class="w-full py-4 mb-2 bg-gray-700 border-2 text-white transition-colors duration-300 rounded-lg"
+          >
+            Standard
+          </button>
+          <button
+            class="w-full py-4 mb-2 bg-gray-300 text-black hover:text-white transition-colors duration-300 rounded-lg"
+          >
+            Performance (+ ₹100,000)
+          </button>
+        </div>
+
+        <!-- self driving option -->
+        <div class="p-4 md_pt-1 mb-8 md:mb-2 rounded-lg border shadow">
+          <h3 class="mb-2 font-semibold">Full Self Driving</h3>
+          <label
+            for="full-self-driving-checkbox"
+            class="flex items-center space-x-4"
+          >
+            <input
+              type="checkbox"
+              id="full-self-driving-checkbox"
+              class="form-checkbox size-4 text-blue-600"
+            />
+            <span>Add Full Self Driving Car for ₹200,000</span>
+          </label>
+        </div>
+
+        <!-- performance upgrade -->
+        <div class="mb-8 md:mb-2" id="wheel-buttons">
+          <h3 class="mb-2 font-semibold">Performance Upgrade</h3>
+          <button
+            class="w-full py-4 mb-2 bg-gray-300 transition-colors duration-300 rounded-lg"
+            id="performance-btn"
+          >
+            (+ ₹100,000)
+          </button>
+        </div>
+
+        <!-- accessories -->
+        <div class="mb-8 md:mb-1" id="accessories">
+          <h3 class="mb-2 font-semibold">Accessories</h3>
+          <label
+            for="Center Console Trays"
+            class="flex items-center justify-between shadow-md rounded p-4 mb-2"
+          >
+            <p>Center Console Trays</p>
+            <div class="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                class="accessory-form-checkbox size-4 text-blue-600"
+                name="Center Console Trays"
+                id="Center Console Trays"
+              />
+              <span>₹50000</span>
+            </div>
+          </label>
+          <label
+            for="All Weather Interior Liners"
+            class="flex items-center justify-between shadow-md rounded p-4 mb-2"
+          >
+            <p>All Weather Interior Liners</p>
+            <div class="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                class="accessory-form-checkbox size-4 text-blue-600"
+                name="All Weather Interior Liners"
+                id="All Weather Interior Liners"
+              />
+              <span>₹50000</span>
+            </div>
+          </label>
+          <label
+            for="SunShade"
+            class="flex items-center justify-between shadow-md rounded p-4 mb-2"
+          >
+            <p>SunShade</p>
+            <div class="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                class="accessory-form-checkbox size-4 text-blue-600"
+                name="SunShade"
+                id="SunShade"
+              />
+              <span>₹50000</span>
+            </div>
+          </label>
+        </div>
+
+        <!-- price -->
+        <div class="pt-4">
+          <h3 class="text-lg font-bold">Total Price</h3>
+          <p id="total-price" class="text-2xl font-bold">₹50000</p>
+        </div>
+
+        <!-- payment -->
+        <div class="border-t pt-4 mt-4 md:mt-1 md:pt-1 pb-4 md:pb-0">
+          <h3 class="text-lg font-semibold">Estimated Payment Breakdown:-</h3>
+          <div class="mt-4">
+            <label for="dpRate"> Down Payment Rate (10%) </label>
+            <input
+              type="range"
+              value="10"
+              min="10"
+              max="50"
+              step="1"
+              id="dpRate"
+              class="w-full"
+            />
+            <p>
+              Down Payment:
+              <span id="down-payment" class="font-bold">₹5000</span>
+            </p>
+            <p>
+              Loan Term:
+              <!-- <span id="Loan-term" class="font-bold">24 months</span> -->
+              <select name="term" id="Loan-term" class="font-bold">
+                <option value="12" selected>1 Year</option>
+                <option value="24">2 Year</option>
+                <option value="36">3 Year</option>
+                <option value="48">4 Year</option>
+                <option value="60">5 Year</option>
+                <option value="72">6 Year</option>
+                <option value="84">7 Year</option>
+                <option value="96">8 Year</option>
+                <option value="108">9 Year</option>
+                <option value="120">10 Year</option>
+              </select>
+            </p>
+            <p>
+              Interest Rate:
+              <span id="Loan-rate" class="font-bold">12%</span>
+            </p>
+            <hr />
+            <p>
+              Estimated Monthly Payments:
+              <span id="monthly-payment" class="font-bold text-2xl">₹555</span>
+            </p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

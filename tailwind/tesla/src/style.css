@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-selected {
+  @apply p-1.5 border-black rounded-full border-2;
+
+  &:hover {
+    transform: scale(1) !important;
+  }
+}
+
+#top-bar {
+  transition: transform 0.5s ease-in-out;
+}
+
+.visible {
+  transform: translateY(0);
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
