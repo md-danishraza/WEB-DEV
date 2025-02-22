@@ -9,7 +9,7 @@ npm-debug.log*
 node_modules/
 
 # Build directories
-# dist/
+dist/
 build/
 
 # Sensitive files
@@ -24,3 +24,33 @@ Thumbs.db
 
 css_small_projects/
 Landing_pages/
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# Local environment variables
+.env.local
+.env.*.local
+
+# Log files
+*.log
+
+# Vite cache
+.vite/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
