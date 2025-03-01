@@ -1,0 +1,48 @@
+.card {
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  align-self: flex-start;
+
+  .price{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: .5rem;
+    background: lightgreen;
+    border-top-left-radius: 5px;
+
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    h4{
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold
+    }
+    p{
+        font-weight: normal;
+        letter-spacing: 120%;
+        word-spacing: 120%;
+        color: gray;
+        span{
+            display: block;
+            color: green;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: .5rem;
+        }
+    }
+  }
+}
