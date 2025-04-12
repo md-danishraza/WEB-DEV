@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useAppContext } from "./AppContext";
-import { FaMoon } from "react-icons/fa";
-import { FaRegSun } from "react-icons/fa";
+
 import { IoSunnyOutline } from "react-icons/io5";
 import { BsMoonStars } from "react-icons/bs";
 function ThemeToggle() {
