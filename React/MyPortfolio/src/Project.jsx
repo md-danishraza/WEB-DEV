@@ -5,7 +5,7 @@ import Item from "./Item";
 function Project() {
   const { loading, projects } = useFetchProjects();
   return (
-    <div className="project-section">
+    <div className="project-section" id="projects">
       <h1>PROJECTS</h1>
       <p>Resourced using CMS</p>
       {loading ? (

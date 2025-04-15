@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
+import { FaTimes, FaBars } from "react-icons/fa";
 import Theme from "../theme";
 function Navbar() {
+  const [menu, setMenu] = useState(false);
   return (
     <div className="navbar">
       <div className="links">
@@ -29,7 +31,17 @@ function Navbar() {
           <FaInstagramSquare className="icon" />
         </a>
       </div>
-      <Theme />
+      <div className={menu ? "navigations active" : "navigations"}>
+        <a href="#">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#projects">Project</a>
+      </div>
+      <div className="menu-theme">
+        <Theme />
+        <span className="menu" onClick={() => setMenu(!menu)}>
+          {menu ? <FaTimes /> : <FaBars />}
+        </span>
+      </div>
     </div>
   );
 }
