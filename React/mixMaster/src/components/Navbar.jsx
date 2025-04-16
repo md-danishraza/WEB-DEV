@@ -11,13 +11,21 @@ function Navbar() {
       <div className="nav-center">
         <span className="logo">MixMaster</span>
         <div className={menu ? "nav-links active" : "nav-links"}>
-          <NavLink to="/" className="nav-link">
+          <NavLink to="/" className="nav-link" onClick={() => setMenu(!menu)}>
             Home
           </NavLink>
-          <NavLink to="/about" className="nav-link">
+          <NavLink
+            to="/about"
+            className="nav-link"
+            onClick={() => setMenu(!menu)}
+          >
             About
           </NavLink>
-          <NavLink to="/newsletter" className="nav-link">
+          <NavLink
+            to="/newsletter"
+            className="nav-link"
+            onClick={() => setMenu(!menu)}
+          >
             Newsletter
           </NavLink>
         </div>

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 const Wrapper = styled.article`
   background: var(--white);
   box-shadow: var(--shadow-2);
@@ -11,6 +11,7 @@ const Wrapper = styled.article`
   }
   img {
     height: 15rem;
+
     border-top-left-radius: var(--borderRadius);
     border-top-right-radius: var(--borderRadius);
   }

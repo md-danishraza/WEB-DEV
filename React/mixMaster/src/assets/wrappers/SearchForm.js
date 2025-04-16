@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.div`
-  margin-bottom: 6rem;
+  /* margin-bottom: 2rem; */
   .form {
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr auto;
   }

@@ -67,6 +67,7 @@ const Wrapper = styled.nav`
     .nav-links {
       flex-direction: row;
       margin-top: 0;
+      padding: 0;
       position: static;
       background-color: transparent;
       justify-content: flex-end;
