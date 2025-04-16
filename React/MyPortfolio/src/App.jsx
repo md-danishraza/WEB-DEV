@@ -1,5 +1,6 @@
 import Footer from "./components/Footer";
 import Navbar from "./components/navbar";
+import Contact from "./Contact";
 import Hero from "./Hero";
 import Project from "./Project";
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <Project />
+      <Contact />
       <Footer />
     </main>
   );

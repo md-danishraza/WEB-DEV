@@ -10,7 +10,7 @@ function Hero() {
           <br />
           I'm <span>Md. Danish Raza</span>
           <br />
-          Full Stack Developer
+          Software Developer
         </h1>
         <p>
           Welcome to my portfolio. <br />
