@@ -33,8 +33,8 @@ function Navbar() {
       </div>
       <div className={menu ? "navigations active" : "navigations"}>
         <a href="#">Home</a>
-        <a href="#contact">Contact</a>
         <a href="#projects">Project</a>
+        <a href="#contact">Contact</a>
       </div>
       <div className="menu-theme">
         <Theme />

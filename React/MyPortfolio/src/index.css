@@ -88,7 +88,7 @@ body{
   z-index: 20;
   position: absolute;
   cursor: pointer;
-  right: 3.5rem;
+  right: 3.2rem;
   &:hover{
     color: gray;
   }
@@ -450,6 +450,29 @@ main{
         }
       }
     }
+
+    
+  }
+}
+
+.pagination-buttons{
+  margin-top: 2rem;
+  text-align: center;
+  .load-more,.collapse{
+    padding: .5rem 1rem;
+  background: var(--highlight);
+  font-family: var(--main-font);
+  font-weight: bolder;
+  border: none;
+  color: lightcyan;
+  -webkit-text-stroke: 1px;
+
+  -webkit-text-stroke-color: black;
+  box-shadow: var(--inset);
+  &:hover{
+    cursor: pointer;
+    color: coral;
+  }
   }
 }
 
