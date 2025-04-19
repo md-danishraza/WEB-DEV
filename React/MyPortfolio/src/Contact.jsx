@@ -24,10 +24,11 @@ function Contact() {
           <h1>About Me.</h1>
           <p>Full Stack Developer</p>
           <h2>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
-            tenetur a explicabo ipsum quaerat impedit blanditiis animi ea,
-            inventore minima repellendus, id ratione iusto in hic magnam
-            mollitia nam totam.
+            Ambitious full-stack MERN developer with a solid background in web
+            development, data analysis, and backend systems. Currently studying
+            for a Bachelor in Vocation Studies SDE at DU. Keen to be part of
+            energetic development teams while constantly developing scalable web
+            applications and user-focused solutions.
           </h2>
           <div className="skills">
             <div className="img">

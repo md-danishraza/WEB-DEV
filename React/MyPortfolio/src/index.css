@@ -127,7 +127,7 @@ body{
 
 main{
   width: 90%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin-inline: auto;
 
   .navbar{
@@ -246,6 +246,13 @@ main{
 
 @media screen and (min-width:540px) {
     main{
+      .navbar{
+
+        .toggle-icon{
+          padding-right: 0;
+        }
+      }
+
       .hero{
         padding : 4rem 2rem;
         flex-direction: row;
@@ -262,7 +269,7 @@ main{
             }
 
             &::after{
-              left: 30%;
+              left:5rem;
               width: 10rem;
             }
           }
@@ -295,6 +302,7 @@ main{
       .info{
         order: 1;
         text-align: left;
+        width: 50%;
         h1{
           font-size: 1.5rem;
           span{
@@ -302,22 +310,18 @@ main{
             font-size: 2rem;
           }
           &::after{
-            left: 20%;
+            left: 5rem;
             width: 10rem;
           }
         }
-        p{
-          
-        }
+        
       }
 
       .img{
         order: 2;
         text-align: right;
 
-        img{
-
-        }
+        
       }
     }
   }
@@ -326,13 +330,13 @@ main{
 
 /* projects */
 .project-section{
-  margin-top: 2rem;
+  margin: 4rem 0;
   background: var(--box-bg);
   padding: 2rem 0;
   padding-inline: 2rem;
   border-radius: .5rem;
   border: 2px solid var(--border-color);
-  min-height: 50vh;
+  min-height: 80vh;
   position: relative;
   box-shadow: var(--inset);
   h1{
@@ -360,11 +364,41 @@ main{
     color: #f0f3bd;
     text-align: center;
     font-family: var(--main-font);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
+
+  .menus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    button{
+      padding: .5rem 1rem;
+      background: var(--highlight);
+      font-family: var(--main-font);
+      font-weight: bolder;
+      font-size: .8rem;
+      border: none;
+      color: lightcyan;
+      -webkit-text-stroke: 1px;
+
+      -webkit-text-stroke-color: black;
+      box-shadow: var(--inset);
+        &:hover{
+          cursor: pointer;
+          color: coral;
+        }
+      &.active{
+        color: coral;
+      }
+    }
+  }
+
   .loading {
     position: absolute;
-    top: 50%; 
+    top: 80%; 
     left: calc(50% - 25px); 
     width: 50px;
     height: 50px;
@@ -377,6 +411,7 @@ main{
   
 
   .projects{
+    margin-top: 2rem;
     display: grid;
     gap: 1rem;
     
@@ -486,6 +521,7 @@ main{
 }
 @media screen and (min-width:540px) {
   .project-section{
+    min-height: 50vh;
     h1{
 
     }
@@ -527,7 +563,7 @@ main{
 
 /* contact */
 .contact{
-  padding: 5rem 0;
+  margin: 5rem 0;
   font-family: var(--main-font);
   h1{
     text-align: center;

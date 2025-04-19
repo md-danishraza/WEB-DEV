@@ -3,7 +3,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTimes, FaBars } from "react-icons/fa";
-import Theme from "../theme";
+import Theme from "../Theme";
 function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
