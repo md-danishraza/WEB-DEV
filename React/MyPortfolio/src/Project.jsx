@@ -55,7 +55,7 @@ function Project() {
             <button
               key={i}
               onClick={() => handleMenu(menu)}
-              className={menu?.status && "active"}
+              className={menu?.status ? "active" : undefined}
             >
               {menu.stack}
             </button>
@@ -69,7 +69,7 @@ function Project() {
           {projects.slice(0, visibleCount).map((project, i) => {
             const currentStack = menu.filter((item) => item.status == true)[0]
               .stack;
-            console.log(currentStack);
+            // console.log(currentStack);
             if (currentStack == "All") {
               return <Item key={i} project={project.fields} />;
             } else {
