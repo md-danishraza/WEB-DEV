@@ -23,6 +23,7 @@ function App() {
   };
   const handleSubmit = (client) => {
     // if null then close mode = cancel is clicked
+    console.log(client);
     if (!client) {
       setModal({ isOpen: false, mode: null, client: null });
       return;

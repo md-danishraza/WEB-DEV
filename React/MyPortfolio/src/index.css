@@ -67,7 +67,7 @@ body{
   top: -23rem;
   align-items: center;
   row-gap: 2rem;
-  transition: all .5s linear;
+  transition: all .8s ease-in-out;
 
   &.active{
     top: 0;
@@ -206,8 +206,9 @@ main{
     }
     
     .img {
-      width: 300px;
-      height: 300px;
+      width: 200px;
+      height: 200px;
+      
       position: relative;
       display: inline-block;
       
@@ -318,6 +319,8 @@ main{
       }
 
       .img{
+        width: 300px;
+      height: 300px;
         order: 2;
         text-align: right;
 

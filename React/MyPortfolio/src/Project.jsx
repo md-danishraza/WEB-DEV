@@ -66,20 +66,18 @@ function Project() {
         <div className="loading"></div>
       ) : (
         <div className="projects">
-          {projects.slice(0, visibleCount).map((project, i) => {
-            const currentStack = menu.filter((item) => item.status == true)[0]
-              .stack;
-            // console.log(currentStack);
-            if (currentStack == "All") {
-              return <Item key={i} project={project.fields} />;
-            } else {
-              return (
-                currentStack == project.fields.stack && (
-                  <Item key={i} project={project.fields} />
-                )
-              );
-            }
-          })}
+          {projects
+            .filter((project) => {
+              const currentStack = menu.find((item) => item.status)?.stack;
+              if (currentStack === "All") {
+                return true; // Show all projects
+              }
+              return project.fields.stack === currentStack; // Filtering by stack
+            })
+            .slice(0, visibleCount) // Slicing the filtered list for pagination
+            .map((project, i) => (
+              <Item key={i} project={project.fields} />
+            ))}
         </div>
       )}
       {!loading && (
