@@ -2,7 +2,7 @@
 
 ## Full stack
 
-- postgres
-- react
-- node
+- postgres (supabase)
+- react (reactQuery , hooks, axios , toastify)
+- node + express + pg(orm)
 - tailwind + daiyUI

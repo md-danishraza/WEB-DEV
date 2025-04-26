@@ -1,6 +1,6 @@
 import React from "react";
 
-function Navbar({ addOpen }) {
+function Navbar({ addOpen, search, handleSearch }) {
   return (
     <div className="navbar bg-base-100 shadow-sm md:px-20">
       <div className="navbar-start  px-0">
@@ -31,6 +31,8 @@ function Navbar({ addOpen }) {
             required
             placeholder="Search"
             className="text-center"
+            value={search}
+            onChange={(event) => handleSearch(event)}
           />
         </label>
       </div>

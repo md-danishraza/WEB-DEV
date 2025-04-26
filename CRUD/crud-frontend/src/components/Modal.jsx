@@ -8,7 +8,7 @@ function Modal({ modal, handleSubmit }) {
     email: "",
     job: "",
     rating: "",
-    status: false,
+    isactive: false,
   });
 
   // Update formData when modal.client changes
@@ -18,7 +18,7 @@ function Modal({ modal, handleSubmit }) {
       email: modal.client?.email || "",
       job: modal.client?.job || "",
       rating: modal.client?.rating || "",
-      status: modal.client?.status || false,
+      isactive: modal.client?.isactive || false,
     });
   }, [modal.client]);
 
@@ -32,6 +32,13 @@ function Modal({ modal, handleSubmit }) {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    // Custom email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
     handleSubmit(formData);
   };
 
@@ -117,8 +124,8 @@ function Modal({ modal, handleSubmit }) {
               <span className="label-text">Active Status</span>
               <input
                 type="checkbox"
-                name="status"
-                checked={formData.status}
+                name="isactive"
+                checked={formData.isactive}
                 onChange={handleChange}
                 className="checkbox"
               />

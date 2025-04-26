@@ -15,7 +15,7 @@ export const createClient = async (clientData) => {
 
     [name, email, job, rating, isactive]
   );
-
+  // console.log(res);
   return res.rows[0];
 };
 export const updateClient = async (clientData, id) => {
