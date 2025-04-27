@@ -12,7 +12,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import axios from "axios";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 
 function App() {
   const queryClient = useQueryClient();
