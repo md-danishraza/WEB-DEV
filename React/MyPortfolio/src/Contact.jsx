@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import js from "./assets/logos/js.png";
 
 import mongo from "./assets/logos/mongo.png";
@@ -15,10 +15,38 @@ import docker from "./assets/logos/docker.png";
 import kubernetes from "./assets/logos/kubernetes.png";
 import aws from "./assets/logos/aws.png";
 
+import axios from "axios";
+import { toast } from "react-toastify";
+
 function Contact() {
+  const [inputs, setInuputs] = useState({ name: "", email: "", message: "" });
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInuputs((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const url = import.meta.env.VITE_FORM + "/send-email";
+
+    try {
+      console.log(url);
+      toast.success("Success!", {
+        position: "top-center",
+        autoClose: 3000,
+      });
+    } catch (error) {
+      toast.error(error.message, {
+        position: "top-center",
+        autoClose: 3000,
+      });
+    }
+  };
   return (
     <div className="contact" id="contact">
-      <h1>CONTACT</h1>
+      <h1 id="contactHeading">CONTACT</h1>
       <div className="content">
         <div className="about" id="about">
           <h1>About Me.</h1>
@@ -72,7 +100,7 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div className="form" id="form">
+        <div className="form" id="form" onSubmit={handleSubmit}>
           <form action="">
             <h1>Let's talk.</h1>
             <p>New project, freelance.</p>
@@ -80,18 +108,38 @@ function Contact() {
             <div className="inputs">
               <fieldset>
                 <label htmlFor="name">Name *</label>
-                <input type="text" id="name" required />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  value={inputs.name}
+                  onChange={handleChange}
+                />
               </fieldset>
               <fieldset>
                 <label htmlFor="email">Email *</label>
-                <input type="email" name="email" id="email" required />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  value={inputs.email}
+                  onChange={handleChange}
+                />
               </fieldset>
               <fieldset>
                 <label htmlFor="message">Message *</label>
-                <textarea name="message" id="message" rows={3}></textarea>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows={3}
+                  value={inputs.message}
+                  onChange={handleChange}
+                ></textarea>
               </fieldset>
             </div>
-            <button>Submit</button>
+            <button type="submit">Submit</button>
           </form>
         </div>
       </div>

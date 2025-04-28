@@ -34,6 +34,7 @@ a {
 }
 body{
   background: #f0f3bd;
+  overflow-x: hidden;
   transition: all .3s linear;
   &.dark{
     --box-bg: black;
@@ -224,16 +225,16 @@ main{
 
         img {
           width: 100%;
-          
+         
           object-fit: cover;
           object-position: center;
-          filter: var(--image-filter);
+          /* filter: var(--image-filter); */
           transition: transform 0.3s ease;
-          transform: translateY(-10%);
+          transform: translateY(55%) scale(2.5) translateX(1%) rotate(2deg);
         }
       
         &:hover img {
-          transform: scale(1.1) translateY(-8%);
+          /* transform: scale(2) translateY(35%); */
         }
       }
     
