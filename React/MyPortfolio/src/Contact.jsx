@@ -17,6 +17,7 @@ import aws from "./assets/logos/aws.png";
 
 import axios from "axios";
 import { toast } from "react-toastify";
+import useScrollReveal from "./utils/useScrollReveal";
 
 function Contact() {
   const [inputs, setInuputs] = useState({ name: "", email: "", message: "" });
@@ -44,6 +45,12 @@ function Contact() {
       });
     }
   };
+
+  useScrollReveal("#contactHeading", { origin: "top", delay: 200 });
+  useScrollReveal(".content .about", { origin: "left", delay: 200 });
+  useScrollReveal(".content .form", { origin: "right", delay: 300 });
+  useScrollReveal(".skills .img img", { origin: "bottom", interval: 150 });
+
   return (
     <div className="contact" id="contact">
       <h1 id="contactHeading">CONTACT</h1>

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import useFetchProjects from "./useFetchProjects";
 import Item from "./Item";
 import { useState } from "react";
+import useScrollReveal from "./utils/useScrollReveal";
 
 function Project() {
   const { loading, projects } = useFetchProjects();
@@ -45,6 +46,13 @@ function Project() {
   const handleCollapse = () => {
     setVisibleCount(6); // Reset to initial count
   };
+
+  useScrollReveal("#projects > h1", { origin: "top", delay: 200 });
+  useScrollReveal("#projects > p", { origin: "top", delay: 300 });
+  useScrollReveal("#projects .menus button", {
+    origin: "bottom",
+    interval: 150,
+  });
   return (
     <div className="project-section" id="projects">
       <h1>PROJECTS</h1>

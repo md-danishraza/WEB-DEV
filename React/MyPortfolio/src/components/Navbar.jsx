@@ -4,8 +4,10 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTimes, FaBars } from "react-icons/fa";
 import Theme from "../Theme";
+
 function Navbar() {
   const [menu, setMenu] = useState(false);
+
   return (
     <div className="navbar">
       <div className="links">
@@ -32,9 +34,15 @@ function Navbar() {
         </a>
       </div>
       <div className={menu ? "navigations active" : "navigations"}>
-        <a href="#">Home</a>
-        <a href="#projects">Project</a>
-        <a href="#contact">Contact</a>
+        <a href="#" className="navlinks">
+          Home
+        </a>
+        <a href="#projects" className="navlinks">
+          Project
+        </a>
+        <a href="#contact" className="navlinks">
+          Contact
+        </a>
       </div>
       <div className="menu-theme">
         <Theme />

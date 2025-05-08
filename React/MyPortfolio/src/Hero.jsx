@@ -1,7 +1,10 @@
 import React from "react";
 import HeroImg from "./assets/hero.svg";
 import profile from "./assets/profile2.jpg";
+import useScrollReveal from "./utils/useScrollReveal";
 function Hero() {
+  useScrollReveal(".hero .info", { origin: "left", delay: 200 });
+  useScrollReveal(".hero .img", { origin: "right", delay: 200 });
   return (
     <div className="hero">
       <div className="info">
