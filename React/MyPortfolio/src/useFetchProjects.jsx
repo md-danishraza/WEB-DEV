@@ -14,7 +14,7 @@ function useFetchProjects() {
     client
       .getEntries({ content_type: "projects" })
       .then((response) => {
-        console.log(response.items);
+        // console.log(response.items);
         SetProjects(response.items.reverse());
         setLoading(false);
       })

@@ -40,11 +40,39 @@ function Project() {
   };
 
   const handleLoadMore = () => {
-    setVisibleCount((prevCount) => prevCount + 6); // Load 6 more projects
+    const targetCount = visibleCount + 6;
+    const increment = 1;
+    const interval = 200;
+
+    let count = visibleCount;
+
+    const increase = () => {
+      if (count < targetCount) {
+        count += increment;
+        setVisibleCount(count);
+        setTimeout(increase, interval);
+      }
+    };
+
+    increase();
   };
 
   const handleCollapse = () => {
-    setVisibleCount(6); // Reset to initial count
+    const targetCount = 6;
+    const decrement = 1;
+    const interval = 200;
+
+    let count = visibleCount;
+
+    const collapse = () => {
+      if (count > targetCount) {
+        count -= decrement;
+        setVisibleCount(count);
+        setTimeout(collapse, interval);
+      }
+    };
+
+    collapse();
   };
 
   useScrollReveal("#projects > h1", { origin: "top", delay: 200 });
@@ -53,6 +81,7 @@ function Project() {
     origin: "bottom",
     interval: 150,
   });
+
   return (
     <div className="project-section" id="projects">
       <h1>PROJECTS</h1>

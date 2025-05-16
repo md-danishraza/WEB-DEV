@@ -15,7 +15,6 @@ import docker from "./assets/logos/docker.png";
 import kubernetes from "./assets/logos/kubernetes.png";
 import aws from "./assets/logos/aws.png";
 
-import axios from "axios";
 import { toast } from "react-toastify";
 import useScrollReveal from "./utils/useScrollReveal";
 
@@ -34,7 +33,7 @@ function Contact() {
 
     try {
       console.log(url);
-      toast.success("Success!", {
+      toast.success("feature coming soon", {
         position: "top-center",
         autoClose: 3000,
       });
@@ -44,11 +43,20 @@ function Contact() {
         autoClose: 3000,
       });
     }
+
+    setInuputs(() => {
+      return { name: "", email: "", message: "" };
+    });
   };
 
   useScrollReveal("#contactHeading", { origin: "top", delay: 200 });
   useScrollReveal(".content .about", { origin: "left", delay: 200 });
+  useScrollReveal(".content .about h1", { origin: "top", delay: 1000 });
+  useScrollReveal(".content .about p", { origin: "top", delay: 1200 });
+  useScrollReveal(".content .about h2", { origin: "top", delay: 1400 });
   useScrollReveal(".content .form", { origin: "right", delay: 300 });
+  useScrollReveal(".content .form h1", { origin: "right", delay: 1000 });
+  useScrollReveal(".content .form p", { origin: "right", delay: 1200 });
   useScrollReveal(".skills .img img", { origin: "bottom", interval: 150 });
 
   return (

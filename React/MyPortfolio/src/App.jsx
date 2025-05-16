@@ -4,8 +4,6 @@ import Contact from "./Contact";
 import Hero from "./Hero";
 import Project from "./Project";
 
-import React, { useEffect } from "react";
-
 const App = () => {
   return (
     <main>

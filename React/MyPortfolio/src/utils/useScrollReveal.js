@@ -21,5 +21,5 @@ export default function useScrollReveal(selector, options = {}) {
       clearTimeout(timeout);
       sr.clean(selector); // cleanup on unmount
     };
-  }, [selector, JSON.stringify(options)]);
+  }, []);
 }
