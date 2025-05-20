@@ -1,0 +1,170 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: lightcyan;
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.ornament{
+  padding: 0;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  
+  height: auto;
+  position: absolute;
+  z-index: 2;
+  pointer-events:none;
+ 
+ transform: translateY(-10%);
+  animation: animate 5s linear infinite ;
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+@keyframes animate {
+  0%{
+    transform: translateY(-100%);
+  }
+  50%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(130%);
+  }
+}
+
+h1{
+  color: darkred;
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img{
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+
+  }
+}
+
+.container{
+  text-align: center;
+
+  
+  
+  #logo{
+   
+    padding: 0;
+    width: 50%;
+    
+    @media screen and (max-width:540px) {
+      width: 100%;
+      margin-inline: auto;
+    }
+  }
+  
+}
+
+
+
+/* CSS */
+.button-54 {
+  margin-top: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  @media screen and (max-width:768px) {
+    margin-top: 30px;
+  }
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+.boxes{
+  width: 150px;
+  height: 150px;
+  background: white;
+  /* border: 2px solid darkslategray; */
+  border-radius: 10px;
+  display: inline-flex;
+  margin-inline: 5px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  @media screen and (max-width:768px) {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+  }
+  @media screen and (max-width:540px) {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+  }
+  @media screen and (max-width:375px) {
+    width: 80px;
+    height: 80px;
+    border-radius: 2px;
+  }
+}
+
+.board{
+  
+  div{
+    margin-top: 5px;
+  }
+}
+
+img{
+  padding: 40px;
+}
+
+@media screen and (max-width:540px) {
+
+  #logo{
+    margin-top: 2rem;
+  }
+  .board{
+    margin-top: 2rem;
+  }
+  
+  img{
+    padding: 10px;
+  }
+}
+
