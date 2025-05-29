@@ -57,7 +57,11 @@ function Contact() {
   useScrollReveal(".content .form", { origin: "right", delay: 300 });
   useScrollReveal(".content .form h1", { origin: "right", delay: 1000 });
   useScrollReveal(".content .form p", { origin: "right", delay: 1200 });
-  useScrollReveal(".skills .img img", { origin: "bottom", interval: 150 });
+  useScrollReveal(".skills .img img", {
+    origin: "bottom",
+    interval: 150,
+    viewFactor: "0.1",
+  });
 
   return (
     <div className="contact" id="contact">

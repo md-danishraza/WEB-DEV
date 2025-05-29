@@ -74,6 +74,7 @@ body {
                    var(--c3) 0 150deg,var(--c2) 0 180deg,var(--c3) 0 210deg,var(--c1) 0 256deg,
                    var(--c2) 0 270deg,var(--c1) 0 286deg,var(--c2) 0 331deg,var(--c3) 0);
   background-size: var(--s) calc(var(--s)/tan(30deg));
+ 
 
 
   
@@ -470,6 +471,20 @@ main{
       width: 100%;
       background: #f0f3bd;
       overflow: hidden;
+
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+
+      &.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      &.hide {
+        opacity: 0;
+        transform: translateY(20px);
+      }
       
       img{
         width: 100%;

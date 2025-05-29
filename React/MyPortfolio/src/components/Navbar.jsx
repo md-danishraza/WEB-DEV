@@ -34,13 +34,13 @@ function Navbar() {
         </a>
       </div>
       <div className={menu ? "navigations active" : "navigations"}>
-        <a href="#" className="navlinks">
+        <a href="#" className="navlinks" onClick={() => setMenu(false)}>
           Home
         </a>
-        <a href="#projects" className="navlinks">
+        <a href="#projects" className="navlinks" onClick={() => setMenu(false)}>
           Project
         </a>
-        <a href="#contact" className="navlinks">
+        <a href="#contact" className="navlinks" onClick={() => setMenu(false)}>
           Contact
         </a>
       </div>

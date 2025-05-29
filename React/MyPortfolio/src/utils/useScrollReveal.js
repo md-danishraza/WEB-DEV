@@ -8,7 +8,8 @@ export default function useScrollReveal(selector, options = {}) {
 
     const timeout = setTimeout(() => {
       sr.reveal(selector, {
-        duration: 800,
+        duration: 1000,
+        delay: 200,
         distance: "40px",
         easing: "ease-in-out",
         reset: false,
