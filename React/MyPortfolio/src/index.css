@@ -105,8 +105,11 @@ body {
     font-family: var(--main-font);
     font-size: 1rem;
     font-weight: bold;
+    text-decoration: none;
+    box-sizing: border-box; 
     &:hover{
       color: white;
+      border-bottom: 2px solid white;
     }
   }
 }
@@ -140,6 +143,7 @@ body {
     font-size: .8rem;
     &:hover{
       color: var(--highlight);
+      border-bottom: 2px solid var(--highlight);
     }
    }
 
@@ -681,6 +685,9 @@ main{
       form{
         border-top: 2px solid var(--highlight);
         border-bottom: 2px solid var(--main-color);
+        background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+        backdrop-filter: blur(5px); /* Apply the blur effect */
+
         padding: 4rem 2rem;
         text-align: left;
         h1{
