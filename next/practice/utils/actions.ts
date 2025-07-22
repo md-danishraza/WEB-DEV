@@ -9,7 +9,9 @@ type User = {
   lastName: string;
 };
 
-export const createUser = async (formData: FormData) => {
+export const createUser = async (prevState: any, formData: FormData) => {
+  // current state of the form
+  console.log(prevState);
   const data = Object.fromEntries(formData.entries());
 
   const newUser: User = {
@@ -18,8 +20,15 @@ export const createUser = async (formData: FormData) => {
     lastName: data.lastName as string,
   };
 
-  await saveUser(newUser);
-  revalidatePath("/action");
+  try {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await saveUser(newUser);
+    revalidatePath("/action");
+    return "user created successfully...";
+  } catch (error) {
+    console.log(error);
+    return "there was an error...";
+  }
 };
 
 const saveUser = async (user: User) => {
