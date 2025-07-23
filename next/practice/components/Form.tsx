@@ -2,13 +2,22 @@
 import React from 'react'
 import { useFormState,useFormStatus } from 'react-dom';
 
-const SubmitButton = () => {
+type actionType = 'submit' | 'delete';
+export const SubmitButton = ({type}:{type:actionType}) => {
   const { pending } = useFormStatus();
-  return (
-    <button type="submit" className={btnStyle} disabled={pending}>
-      {pending ? "submitting..." : "submit"}
-    </button>
-  );
+  if(type === 'submit'){
+    return (
+      <button type="submit" className={btnStyle} disabled={pending}>
+        {pending ? "submitting..." : "submit"}
+      </button>
+    );
+  }else{
+    return (
+      <button type="submit" className={btnStyle} disabled={pending}>
+        {pending ? "deleting..." : "delete"}
+      </button>
+    );
+  }
 };
 
 import { createUser } from '@/utils/actions';
@@ -33,7 +42,7 @@ function Form() {
             className={inputStyle}
             defaultValue="smith"
           />
-          <SubmitButton/>
+          <SubmitButton type='submit'/>
         </form>
       )
 }
