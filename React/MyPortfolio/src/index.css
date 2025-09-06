@@ -23,6 +23,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: .5s ease;
 }
 html{
   scroll-behavior: smooth;
@@ -41,7 +42,8 @@ body{
   --c2: #e8efb3; /* Slightly darker */
   --c3: #fcf7c9; /* Slightly lighter */
   overflow-x: hidden;
-  transition: all .3s linear;
+  transition: all .3s ease;
+
   &.dark{
     --box-bg: black;
     --main-color:#f0f3bd;
@@ -275,7 +277,7 @@ main{
 
 @keyframes ani-float {
   0% { transform: translate(0,  0px); }
-  50% { transform: translate(0, 15px); }
+  50% { transform: translate(0, 5px); }
   100% { transform: translate(0, -0px); }    
 }
 

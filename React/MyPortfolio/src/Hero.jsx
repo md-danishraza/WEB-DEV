@@ -20,7 +20,7 @@ function Hero() {
           B.Voc. SDE at Ramanujan College, DU. <br />
           Tenacity to learn anything.
           <br />
-          MERN.
+          MERN-NEXT JS
         </p>
       </div>
 

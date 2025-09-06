@@ -17,6 +17,7 @@ import aws from "./assets/logos/aws.png";
 
 import { toast } from "react-toastify";
 import useScrollReveal from "./utils/useScrollReveal";
+import Form from "./Form";
 
 function Contact() {
   const [inputs, setInuputs] = useState({ name: "", email: "", message: "" });
@@ -71,11 +72,11 @@ function Contact() {
           <h1>About Me.</h1>
           <p>Full Stack Developer</p>
           <h2>
-            Ambitious full-stack MERN developer with a solid background in web
-            development, data analysis, and backend systems. Currently studying
-            for a Bachelor in Vocation Studies SDE at DU. Keen to be part of
-            energetic development teams while constantly developing scalable web
-            applications and user-focused solutions.
+            Ambitious full-stack Javascript developer with a solid background in
+            web development, data analysis, and backend systems. Currently
+            studying for a Bachelor in Vocation Studies SDE at DU. Keen to be
+            part of energetic development teams while constantly developing
+            scalable web applications and user-focused solutions.
           </h2>
           <div className="skills">
             <div className="img">
@@ -119,47 +120,12 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div className="form" id="form" onSubmit={handleSubmit}>
-          <form action="">
-            <h1>Let's talk.</h1>
-            <p>New project, freelance.</p>
-
-            <div className="inputs">
-              <fieldset>
-                <label htmlFor="name">Name *</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  value={inputs.name}
-                  onChange={handleChange}
-                />
-              </fieldset>
-              <fieldset>
-                <label htmlFor="email">Email *</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  required
-                  value={inputs.email}
-                  onChange={handleChange}
-                />
-              </fieldset>
-              <fieldset>
-                <label htmlFor="message">Message *</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  rows={3}
-                  value={inputs.message}
-                  onChange={handleChange}
-                ></textarea>
-              </fieldset>
-            </div>
-            <button type="submit">Submit</button>
-          </form>
+        <div className="form" id="form">
+          <Form
+            inputs={inputs}
+            handleSubmit={handleSubmit}
+            handleChange={handleChange}
+          />
         </div>
       </div>
     </div>

@@ -1,12 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import useFetchProjects from "./useFetchProjects";
 import Item from "./Item";
-import { useState } from "react";
 import useScrollReveal from "./utils/useScrollReveal";
 
 function Project() {
   const { loading, projects } = useFetchProjects();
-
   const [visibleCount, setVisibleCount] = useState(6);
 
   const menus = [
@@ -27,15 +25,11 @@ function Project() {
     });
   }, []);
 
-  const handleMenu = (menu) => {
+  const handleMenu = (menuItem) => {
     setMenu(
-      menus.map((item) => {
-        if (item.stack == menu.stack) {
-          return { ...item, status: true };
-        } else {
-          return item;
-        }
-      })
+      menus.map((item) =>
+        item.stack === menuItem.stack ? { ...item, status: true } : item
+      )
     );
   };
 
@@ -43,7 +37,6 @@ function Project() {
     const targetCount = visibleCount + 6;
     const increment = 1;
     const interval = 200;
-
     let count = visibleCount;
 
     const increase = () => {
@@ -61,7 +54,6 @@ function Project() {
     const targetCount = 6;
     const decrement = 1;
     const interval = 200;
-
     let count = visibleCount;
 
     const collapse = () => {
@@ -82,53 +74,53 @@ function Project() {
     interval: 150,
   });
 
+  // Calculate the filtered projects based on current menu
+  const filteredProjects = (projects || []).filter((project) => {
+    const currentStack = menu.find((item) => item.status)?.stack;
+    if (currentStack === "All") {
+      return true;
+    }
+    return project.fields.stack === currentStack;
+  });
+
   return (
     <div className="project-section" id="projects">
       <h1>PROJECTS</h1>
       <p>Resourced using CMS</p>
       <div className="menus">
-        {menu.map((menu, i) => {
-          return (
-            <button
-              key={i}
-              onClick={() => handleMenu(menu)}
-              className={menu?.status ? "active" : undefined}
-            >
-              {menu.stack}
-            </button>
-          );
-        })}
+        {menu.map((menuItem, i) => (
+          <button
+            key={i}
+            onClick={() => handleMenu(menuItem)}
+            className={menuItem.status ? "active" : undefined}
+          >
+            {menuItem.stack}
+          </button>
+        ))}
       </div>
       {loading ? (
         <div className="loading"></div>
       ) : (
         <div className="projects">
-          {projects
-            .filter((project) => {
-              const currentStack = menu.find((item) => item.status)?.stack;
-              if (currentStack === "All") {
-                return true; // Show all projects
-              }
-              return project.fields.stack === currentStack; // Filtering by stack
-            })
-            .slice(0, visibleCount) // Slicing the filtered list for pagination
-            .map((project, i) => (
-              <Item key={i} project={project.fields} />
-            ))}
+          {filteredProjects.slice(0, visibleCount).map((project, i) => (
+            <Item key={i} project={project.fields} />
+          ))}
         </div>
       )}
       {!loading && (
         <div className="pagination-buttons">
-          {visibleCount < projects.length && (
+          {filteredProjects.length > visibleCount && menus.length >= 6 && (
             <button onClick={handleLoadMore} className="load-more">
               Load More
             </button>
           )}
-          {visibleCount >= projects.length && projects.length > 6 && (
-            <button onClick={handleCollapse} className="collapse">
-              Collapse
-            </button>
-          )}
+          {visibleCount >= filteredProjects.length &&
+            filteredProjects.length > 6 &&
+            menus.length >= 6 && (
+              <button onClick={handleCollapse} className="collapse">
+                Collapse
+              </button>
+            )}
         </div>
       )}
     </div>
