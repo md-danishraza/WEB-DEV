@@ -18,9 +18,11 @@ import aws from "./assets/logos/aws.png";
 import { toast } from "react-toastify";
 import useScrollReveal from "./utils/useScrollReveal";
 import Form from "./Form";
+import axios from "axios";
 
 function Contact() {
   const [inputs, setInuputs] = useState({ name: "", email: "", message: "" });
+  const [loading, setLoading] = useState(false);
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -30,24 +32,47 @@ function Contact() {
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
     const url = import.meta.env.VITE_FORM + "/send-email";
 
     try {
-      console.log(url);
-      toast.success("feature coming soon", {
-        position: "top-center",
-        autoClose: 3000,
-      });
-    } catch (error) {
-      toast.error(error.message, {
-        position: "top-center",
-        autoClose: 3000,
-      });
-    }
+      const response = await axios.post(url, inputs);
 
-    setInuputs(() => {
-      return { name: "", email: "", message: "" };
-    });
+      if (response.data) {
+        toast.success(response.data.message, {
+          position: "top-center",
+          autoClose: 3000,
+        });
+      }
+
+      setInuputs({ name: "", email: "", message: "" });
+    } catch (error) {
+      let errorMessage = "An unknown error occurred.";
+
+      if (error.response) {
+        // Server responded with a status code (4xx, 5xx)
+        if (error.response.data.errors) {
+          // This is a validation error array from express-validator
+          errorMessage = error.response.data.errors
+            .map((err) => err.msg)
+            .join(" ");
+        } else if (error.response.data.message) {
+          // This is a rate limit or 500 error message
+          errorMessage = error.response.data.message;
+        }
+      } else if (error.request) {
+        // Request was made but no response received (e.g., server is down)
+        errorMessage =
+          "Could not connect to the server. Please try again later.";
+      }
+
+      toast.error(errorMessage, {
+        position: "top-center",
+        autoClose: 3000,
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   useScrollReveal("#contactHeading", { origin: "top", delay: 200 });
@@ -125,6 +150,7 @@ function Contact() {
             inputs={inputs}
             handleSubmit={handleSubmit}
             handleChange={handleChange}
+            isLoading={loading}
           />
         </div>
       </div>

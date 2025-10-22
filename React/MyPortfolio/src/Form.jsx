@@ -1,6 +1,6 @@
 import React from "react";
 
-function Form({ inputs, handleSubmit, handleChange }) {
+function Form({ inputs, handleSubmit, handleChange, isLoading }) {
   return (
     <form action="" onSubmit={handleSubmit}>
       <h1>Let's talk.</h1>
@@ -40,7 +40,9 @@ function Form({ inputs, handleSubmit, handleChange }) {
           ></textarea>
         </fieldset>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" disabled={isLoading}>
+        {isLoading ? "Submitting" : "Submit"}
+      </button>
     </form>
   );
 }

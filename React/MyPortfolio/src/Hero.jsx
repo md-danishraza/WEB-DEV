@@ -31,7 +31,7 @@ function Hero() {
           width="300"
           height="300"
           viewBox="-25 -25 250 250"
-          class="float"
+          className="float"
         >
           <defs>
             <pattern

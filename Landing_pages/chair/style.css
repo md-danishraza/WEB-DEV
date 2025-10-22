@@ -16,51 +16,83 @@
 }
 
 /* nav */
-nav{
+nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
-    text-align: center;
-
     font-family: var(--main-font);
-}
-ul li{
-    display: inline;
+    position: relative;
+  }
+  
+  .logo h1 {
+    margin: 0;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 4rem;
+  }
+  
+  .nav-links li {
     list-style: none;
-}
-ul li a{
-    font-family: var(--primary-font);;
+  }
+  
+  .nav-links a {
+    font-family: var(--primary-font);
     text-decoration: none;
     color: black;
-    margin-left: 4rem;
     font-size: large;
-}
-ul li a:hover{
+  }
+  
+  .nav-links a:hover {
     padding-bottom: 5px;
     border-bottom: 2px solid black;
-}
-.btn-fill{
+  }
+  
+  .btn-fill {
     border: none;
     padding: 10px 30px;
     border-radius: 100px;
     color: white;
     background-color: black;
-    font-family: var(--main-font);
     cursor: pointer;
-}
-.btn-outline{
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
     border: none;
-    background: transparent;
-    margin-left: 20px;
-    font-weight: bold;
     cursor: pointer;
-}
-.btn-outline:hover{
-    border: 2px solid black;
-    /* padding: 10px 30px;
-    border-radius: 100px; */
-}
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: white;
+      display: none;
+      padding: 10px;
+      z-index: 999;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    .btn.container {
+      display: none; /* Optional: hide on smaller screens */
+    }
+  }
 
 /* header */
 header{
@@ -352,3 +384,5 @@ footer .about-company h1{
     }
 
 }
+
+
